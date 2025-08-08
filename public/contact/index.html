@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Contact Us | Mile Zero Enterprises</title>
+  <style>
+    body{font-family:system-ui,Segoe UI,Roboto;max-width:720px;margin:40px auto;padding:0 16px;}
+    label{display:block;margin:12px 0 6px}
+    input,select,textarea{width:100%;padding:10px;border:1px solid #cbd5e1;border-radius:10px}
+    button{margin-top:12px;padding:12px 16px;border:0;border-radius:10px;font-weight:600;cursor:pointer}
+    .ok{margin-top:12px;padding:10px;border-radius:10px;background:#ecfdf5;border:1px solid #10b981;}
+    .err{margin-top:12px;padding:10px;border-radius:10px;background:#fef2f2;border:1px solid #ef4444;}
+    .hp{display:none} /* honeypot */
+  </style>
+</head>
+<body>
+  <h1>Contact Mile Zero Enterprises</h1>
+  <p>Use this form for general inquiries or to request deletion of your app account.</p>
+
+  <form id="contactForm" method="POST" action="https://us-central1-wifehacker-1ec31.cloudfunctions.net/contactSubmit" accept-charset="UTF-8">
+    <label for="topic">Topic</label>
+    <select id="topic" name="topic" required>
+      <option value="general">General inquiry</option>
+      <option value="account_deletion">Account deletion request</option>
+    </select>
+
+    <label for="email">Your email</label>
+    <input id="email" name="email" type="email" required placeholder="you@example.com" autocomplete="email">
+
+    <label for="message">Details</label>
+    <textarea id="message" name="message" rows="5" required placeholder="Tell us how we can help. For account deletion, we’ll verify ownership via this email."></textarea>
+
+    <!-- Honeypot -->
+    <input class="hp" type="text" name="website" tabindex="-1" autocomplete="off">
+
+    <!-- Cloudflare Turnstile -->
+    <div class="cf-turnstile" data-sitekey="0x4AAAAAABpftph1nTKaI-zC"></div>
+    <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
+
+    <button type="submit">Send</button>
+    <div id="status"></div>
+  </form>
+
+  <script>
+    const form = document.getElementById('contactForm');
+    const status = document.getElementById('status');
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      status.textContent = 'Sending...';
+
+      // Convert FormData to URL-encoded for Firebase Functions parsing
+      const fd = new FormData(form);
+      const body = new URLSearchParams(fd);
+
+      try {
+        const resp = await fetch(form.action, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+          body
+        });
+
+        let msg = 'Thanks! Check your email for confirmation.';
+        try {
+          const j = await resp.clone().json();
+          if (j?.message || j?.error) msg = j.message || j.error;
+        } catch {
+          const t = await resp.text();
+          if (t) msg = t;
+        }
+
+        status.className = resp.ok ? 'ok' : 'err';
+        status.textContent = msg;
+        if (resp.ok) form.reset();
+      } catch (err) {
+        status.className = 'err';
+        status.textContent = 'Network error. Please try again.';
+      }
+    });
+  </script>
+
+  <p style="margin-top:16px;color:#555;font-size:.9rem">
+    For account deletion: we’ll send a confirmation to verify ownership before deletion. See our <a href="/privacy">Privacy Policy</a>.
+  </p>
+</body>
+</html>
