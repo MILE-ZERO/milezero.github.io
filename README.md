@@ -29,6 +29,6 @@ pushed to the default branch are automatically published via GitHub Pages.
 
 ## Contact
 
-For questions about Mile Zero Enterprises or to request deletion of an app account, use our [contact form](public/contact/).
+For questions about Mile Zero Enterprises or to request deletion of an app account, use our [contact form](/public/contact/index.html).
 The form is powered by a serverless backend and handles general inquiries as well as account deletion requests.
 
