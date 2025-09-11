@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CattleProd – Privacy Policy</title>
+  <style>
+    :root { --bg:#0b1220; --card:#111827; --text:#e5e7eb; --muted:#a3a9b7; --link:#60a5fa; }
+    html,body { margin:0; padding:0; background:var(--bg); color:var(--text); font-family: system-ui,-apple-system,Segoe UI,Roboto,Inter; }
+    .wrap { max-width: 900px; margin: 40px auto; padding: 0 16px; }
+    header h1 { margin: 0 0 4px; font-size: clamp(1.6rem,1.2rem + 1.2vw,2.2rem); }
+    header p { margin: 0; color: var(--muted); }
+    section { background: var(--card); border: 1px solid #223; border-radius: 16px; padding: 20px; margin: 18px 0; }
+    h2 { margin-top: 0; font-size: 1.2rem; }
+    a { color: var(--link); }
+    ul { margin-top: 8px; }
+    .small { color: var(--muted); font-size: .9rem; }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <h1>Privacy Policy</h1>
+      <p class="small">For the CattleProd mobile application</p>
+      <p class="small">Last updated: <span id="last-updated">—</span></p>
+    </header>
+
+    <section>
+      <h2>Information We Collect</h2>
+      <ul>
+        <li><strong>Usage Data</strong>: Pages viewed, screens visited, and general interaction patterns to help improve the app.</li>
+        <li><strong>Device Information</strong>: Device model, operating system version, unique identifiers (e.g., advertising ID), and IP address.</li>
+        <li><strong>Crash Reports</strong>: Stack traces and device state at the time of a crash.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>How We Use Your Information</h2>
+      <p><strong>Advertising (AdMob)</strong>:</p>
+      <ul>
+        <li>To display ads, which may be personalized or non-personalized depending on user choice and region.</li>
+        <li>Google AdMob may collect advertising IDs, device identifiers, IP addresses, and usage data to serve relevant ads and detect fraud.</li>
+      </ul>
+      <p><strong>Analytics & Crash Reporting (Firebase Crashlytics)</strong>:</p>
+      <ul>
+        <li>To diagnose problems, monitor stability, and improve the app.</li>
+        <li>Crash reports include device details, app version, and usage info immediately before a crash.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Data Sharing</h2>
+      <ul>
+        <li><strong>Google AdMob</strong>: Receives data necessary to serve ads and perform analytics/fraud prevention.</li>
+        <li><strong>Firebase Crashlytics (Google)</strong>: Receives crash log data, used solely to help diagnose and resolve issues.</li>
+      </ul>
+      <p>We do not sell or share your personal data with other third parties except as described above or as required by law.</p>
+    </section>
+
+    <section>
+      <h2>Consent and Control</h2>
+      <ul>
+        <li><strong>Advertising Choices</strong>: Users may opt out of personalized ads via device settings where available.</li>
+        <li><strong>Crash Reporting</strong>: By using the app, crash logs will be transmitted automatically; to disable, stop using the app.</li>
+        <li><strong>Children’s Privacy</strong>: The app is not targeted toward children under 13.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Data Retention</h2>
+      <p>Ad and crash data are retained only as long as necessary to provide the service and meet legal obligations. Google’s retention policies also apply.</p>
+    </section>
+
+    <section>
+      <h2>Security</h2>
+      <p>We use commercially reasonable safeguards to protect data. However, no method of transmission or storage is fully secure.</p>
+    </section>
+
+    <section>
+      <h2>Changes to This Policy</h2>
+      <p>Updates will be posted within the app or at a provided URL. Continued use after changes implies acceptance.</p>
+    </section>
+
+    <section>
+      <h2>Contact Us</h2>
+      <p>If you have questions, concerns, or requests, contact us via our <a href="/public/contact/index.html">Contact form</a>.</p>
+    </section>
+
+    <p class="small">Mile Zero Enterprises, LLC • New Orleans, LA • USA</p>
+  </div>
+
+  <script>
+    (function(){
+      try {
+        const el = document.getElementById('last-updated');
+        const d = new Date();
+        const fmt = d.toLocaleDateString(undefined, { year:'numeric', month:'long', day:'2-digit' });
+        el.textContent = fmt;
+      } catch (_) {}
+    })();
+  </script>
+</body>
+</html>
