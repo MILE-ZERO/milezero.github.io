@@ -1,0 +1,324 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>GNO Roofing Connect | Text (504) 766-3463 for Roofing Help</title>
+  <meta name="description" content="Text (504) 766-3463 for roofing help in Greater New Orleans. Fast qualification for roof repair, replacement, and storm damage claims.">
+  <style>
+    :root{
+      --bg:#0b1220;
+      --panel:#111827;
+      --panel-2:#0f172a;
+      --text:#e5e7eb;
+      --muted:#9ca3af;
+      --accent:#38bdf8;
+      --accent-2:#22c55e;
+      --border:#23314d;
+      --warning:#f59e0b;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:system-ui,-apple-system,Segoe UI,Roboto,Inter,Arial,sans-serif;
+      background:linear-gradient(180deg,#08101d 0%, #0b1220 100%);
+      color:var(--text);
+      line-height:1.5;
+    }
+    a{color:var(--accent)}
+    .wrap{
+      max-width:1040px;
+      margin:0 auto;
+      padding:24px 18px 56px;
+    }
+    .topbar{
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      gap:16px;
+      margin-bottom:24px;
+      flex-wrap:wrap;
+    }
+    .brand{
+      font-weight:700;
+      letter-spacing:.2px;
+    }
+    .brand small{
+      display:block;
+      color:var(--muted);
+      font-weight:500;
+      margin-top:4px;
+    }
+    .hero{
+      display:grid;
+      grid-template-columns:1.2fr .9fr;
+      gap:24px;
+      align-items:stretch;
+    }
+    .card{
+      background:rgba(17,24,39,.92);
+      border:1px solid var(--border);
+      border-radius:22px;
+      padding:28px;
+      box-shadow:0 12px 30px rgba(0,0,0,.25);
+    }
+    h1{
+      margin:0 0 14px;
+      font-size:clamp(2rem, 1.4rem + 2vw, 3.4rem);
+      line-height:1.08;
+    }
+    .lede{
+      font-size:1.05rem;
+      color:#dbe4f3;
+      margin:0 0 18px;
+      max-width:60ch;
+    }
+    .cta-box{
+      border:1px solid #1d4ed8;
+      background:linear-gradient(180deg, rgba(30,64,175,.22), rgba(15,23,42,.5));
+      border-radius:18px;
+      padding:20px;
+      margin:20px 0;
+    }
+    .eyebrow{
+      font-size:.86rem;
+      text-transform:uppercase;
+      letter-spacing:.08em;
+      color:var(--accent);
+      font-weight:700;
+      margin-bottom:10px;
+    }
+    .phone{
+      display:block;
+      font-size:clamp(1.8rem, 1.2rem + 2vw, 3rem);
+      font-weight:800;
+      color:white;
+      text-decoration:none;
+      margin:6px 0 10px;
+      word-break:break-word;
+    }
+    .subcta{
+      margin:0;
+      color:#d7e5ff;
+    }
+    .buttons{
+      display:flex;
+      gap:12px;
+      flex-wrap:wrap;
+      margin-top:18px;
+    }
+    .btn{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      min-height:46px;
+      padding:0 16px;
+      border-radius:12px;
+      text-decoration:none;
+      font-weight:700;
+      border:1px solid transparent;
+    }
+    .btn-primary{
+      background:var(--accent-2);
+      color:#052e16;
+    }
+    .btn-secondary{
+      background:transparent;
+      color:var(--text);
+      border-color:var(--border);
+    }
+    .list{
+      margin:16px 0 0;
+      padding-left:20px;
+    }
+    .list li{margin:8px 0}
+    .mini{
+      color:var(--muted);
+      font-size:.95rem;
+    }
+    .steps{
+      display:grid;
+      gap:14px;
+    }
+    .step{
+      background:var(--panel-2);
+      border:1px solid var(--border);
+      border-radius:16px;
+      padding:16px;
+    }
+    .step-num{
+      display:inline-block;
+      min-width:30px;
+      height:30px;
+      line-height:30px;
+      border-radius:999px;
+      text-align:center;
+      background:#13213a;
+      color:var(--accent);
+      font-weight:800;
+      margin-right:8px;
+    }
+    .sms{
+      background:#09111f;
+      border:1px solid var(--border);
+      border-radius:16px;
+      padding:16px;
+      margin-top:18px;
+    }
+    .sms pre{
+      white-space:pre-wrap;
+      margin:8px 0 0;
+      font-family:inherit;
+      color:#dbe7f6;
+    }
+    .grid{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:22px;
+      margin-top:24px;
+    }
+    .section-title{
+      margin:0 0 10px;
+      font-size:1.25rem;
+    }
+    .notice{
+      margin-top:20px;
+      padding:16px;
+      border-radius:14px;
+      background:rgba(245,158,11,.08);
+      border:1px solid rgba(245,158,11,.28);
+      color:#fde7b2;
+    }
+    footer{
+      margin-top:30px;
+      color:var(--muted);
+      font-size:.95rem;
+    }
+    .foot-links{
+      display:flex;
+      gap:14px;
+      flex-wrap:wrap;
+      margin-top:10px;
+    }
+    code{
+      background:#0b1324;
+      padding:2px 6px;
+      border-radius:6px;
+      border:1px solid var(--border);
+      color:#dbe7f6;
+    }
+    @media (max-width:860px){
+      .hero,.grid{grid-template-columns:1fr}
+      .card{padding:22px}
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="topbar">
+      <div class="brand">
+        GNO Roofing Connect
+        <small>Lead qualification service by Mile Zero Enterprises, LLC</small>
+      </div>
+      <div class="mini">Serving Greater New Orleans</div>
+    </div>
+
+    <section class="hero">
+      <div class="card">
+        <div class="eyebrow">Roofing Help by Text</div>
+        <h1>Text <span style="white-space:nowrap;">(504) 766-3463</span> for roofing help</h1>
+        <p class="lede">
+          Need help with a roof leak, storm damage, roof replacement, or an insurance-related roofing issue in Greater New Orleans?
+          Text our business number to start a short qualification flow and get connected with a local roofing contractor.
+        </p>
+
+        <div class="cta-box">
+          <div class="eyebrow">Call to Action</div>
+          <a class="phone" href="sms:+15047663463">(504) 766-3463</a>
+          <p class="subcta">
+            Send a text message with your roofing issue, such as <code>Roof leak in Metairie</code> or <code>Storm damage in Kenner</code>.
+          </p>
+          <div class="buttons">
+            <a class="btn btn-primary" href="sms:+15047663463?body=Roof%20leak%20in%20Metairie">Text Now</a>
+            <a class="btn btn-secondary" href="#how-it-works">How it works</a>
+          </div>
+        </div>
+
+        <ul class="list">
+          <li>Customer-initiated messaging only</li>
+          <li>Fast qualification by SMS</li>
+          <li>Explicit consent required before contractor contact</li>
+          <li>Designed for roof repair, replacement, and storm/insurance inquiries</li>
+        </ul>
+
+        <div class="notice">
+          By texting this number, you consent to receive conversational text messages related to your roofing request.
+          Message frequency varies. Message and data rates may apply. Reply <strong>STOP</strong> to opt out or <strong>HELP</strong> for help.
+        </div>
+      </div>
+
+      <div class="card" id="how-it-works">
+        <h2 class="section-title">How it works</h2>
+        <div class="steps">
+          <div class="step">
+            <span class="step-num">1</span>
+            <strong>You text our number first.</strong>
+            <div class="mini">Example: “Roof leak in Metairie”</div>
+          </div>
+          <div class="step">
+            <span class="step-num">2</span>
+            <strong>You receive an automated response.</strong>
+            <div class="mini">The first response includes business identification, STOP/HELP instructions, and message-rate disclosure.</div>
+          </div>
+          <div class="step">
+            <span class="step-num">3</span>
+            <strong>You answer a few qualification questions.</strong>
+            <div class="mini">We may ask about ownership, ZIP code, timing, roof age, and whether an insurance claim is involved.</div>
+          </div>
+          <div class="step">
+            <span class="step-num">4</span>
+            <strong>You must explicitly consent before contractor contact.</strong>
+            <div class="mini">We ask you to reply YES before sharing your information with a local roofing contractor.</div>
+          </div>
+        </div>
+
+        <div class="sms">
+          <strong>Example first automated response</strong>
+          <pre>GNO Roofing Lead Qualification Service (by Mile Zero Enterprises).
+We’ll ask a few questions to connect you with a local roofing contractor.
+Message frequency varies. Msg &amp; data rates may apply. Reply STOP to opt out. Reply HELP for help.</pre>
+        </div>
+      </div>
+    </section>
+
+    <section class="grid">
+      <div class="card">
+        <h2 class="section-title">Example consent message</h2>
+        <p class="mini">Before any contractor contact, the user is asked for explicit permission.</p>
+        <div class="sms">
+          <pre>We may share your information with a local roofing contractor who may contact you by phone or text regarding your request. We may receive compensation for connecting you. Reply YES to consent to being contacted.</pre>
+        </div>
+      </div>
+
+      <div class="card">
+        <h2 class="section-title">What this service is</h2>
+        <ul class="list">
+          <li>A lead qualification and connection service for roofing-related requests</li>
+          <li>Not a roofing contractor</li>
+          <li>Not emergency services</li>
+          <li>Intended for users seeking roofing help in the Greater New Orleans area</li>
+        </ul>
+      </div>
+    </section>
+
+    <footer>
+      <div>Mile Zero Enterprises, LLC • Greater New Orleans, Louisiana</div>
+      <div class="foot-links">
+        <a href="/gno/roofing/docs/privacy.html">Privacy Policy</a>
+        <a href="/gno/roofing/docs/terms.html">Terms &amp; Conditions</a>
+        <a href="/public/contact/index.html">Contact</a>
+      </div>
+    </footer>
+  </div>
+</body>
+</html>
