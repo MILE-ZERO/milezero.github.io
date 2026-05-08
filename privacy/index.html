@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Privacy Policy — Mile Zero Enterprises</title>
+  <meta name="description" content="Privacy policy for Mile Zero Enterprises — how we collect and use information on milezeroenterprises.com.">
+  <meta name="robots" content="noindex">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-BKB4HV8Q8Z"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-BKB4HV8Q8Z');
+  </script>
+
+  <style>
+    :root {
+      --bg:          #f8fafc;
+      --surface:     #ffffff;
+      --border:      #e2e8f0;
+      --text:        #0f172a;
+      --muted:       #64748b;
+      --accent:      #0e7490;
+      --accent-dark: #155e75;
+      --accent-bg:   #ecfeff;
+      --accent-border: #a5f3fc;
+      --nav-h:       64px;
+      --radius:      14px;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Inter', system-ui, -apple-system, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    /* NAV */
+    .nav {
+      position: sticky; top: 0; z-index: 100;
+      height: var(--nav-h);
+      background: rgba(255,255,255,0.92);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+      display: flex; align-items: center;
+    }
+    .nav-inner {
+      max-width: 1080px; margin: 0 auto; padding: 0 24px;
+      width: 100%; display: flex; align-items: center; justify-content: space-between;
+    }
+    .nav-logo { display: flex; align-items: center; text-decoration: none; color: var(--text); }
+    .nav-logo img { height: 44px; width: auto; }
+    .nav-links { display: flex; align-items: center; gap: 8px; list-style: none; }
+    .nav-links a {
+      text-decoration: none; color: var(--muted); font-size: 0.875rem; font-weight: 500;
+      padding: 6px 14px; border-radius: 8px; transition: color 0.15s, background 0.15s;
+    }
+    .nav-links a:hover { color: var(--text); background: var(--bg); }
+    .nav-links .btn-nav { background: var(--accent); color: #fff !important; padding: 7px 16px; border-radius: 8px; }
+    .nav-links .btn-nav:hover { background: var(--accent-dark); }
+    .nav-toggle { display: none; background: none; border: none; cursor: pointer; padding: 6px; color: var(--text); }
+
+    /* PAGE HEADER */
+    .page-header {
+      background: var(--surface); border-bottom: 1px solid var(--border);
+      padding: 48px 24px 40px; text-align: center;
+    }
+    .page-header-inner { max-width: 680px; margin: 0 auto; }
+    .section-label {
+      display: inline-block; font-size: 0.75rem; font-weight: 700;
+      letter-spacing: 0.08em; text-transform: uppercase;
+      color: var(--accent); background: var(--accent-bg);
+      border: 1px solid var(--accent-border); padding: 4px 12px;
+      border-radius: 999px; margin-bottom: 14px;
+    }
+    .page-header h1 {
+      font-size: clamp(1.8rem, 1.3rem + 1.5vw, 2.4rem);
+      font-weight: 800; letter-spacing: -0.02em; color: var(--text); margin-bottom: 10px;
+    }
+    .page-header .meta { font-size: 0.85rem; color: var(--muted); }
+
+    /* CONTENT */
+    .content-wrap { max-width: 760px; margin: 0 auto; padding: 56px 24px 80px; }
+
+    .content-wrap h2 {
+      font-size: 1.15rem; font-weight: 700; color: var(--text);
+      letter-spacing: -0.01em; margin: 40px 0 10px;
+      padding-bottom: 8px; border-bottom: 1px solid var(--border);
+    }
+    .content-wrap h2:first-child { margin-top: 0; }
+
+    .content-wrap p {
+      font-size: 0.95rem; color: var(--muted);
+      line-height: 1.8; margin-bottom: 14px;
+    }
+    .content-wrap p:last-child { margin-bottom: 0; }
+
+    .content-wrap ul {
+      margin: 10px 0 14px 0; padding-left: 0; list-style: none;
+    }
+    .content-wrap ul li {
+      font-size: 0.95rem; color: var(--muted); line-height: 1.8;
+      padding: 6px 0 6px 20px; position: relative;
+    }
+    .content-wrap ul li::before {
+      content: ''; position: absolute; left: 0; top: 14px;
+      width: 6px; height: 6px; border-radius: 50%;
+      background: var(--accent);
+    }
+
+    .content-wrap a { color: var(--accent); text-decoration: none; }
+    .content-wrap a:hover { text-decoration: underline; }
+
+    .callout {
+      background: var(--accent-bg); border: 1px solid var(--accent-border);
+      border-radius: var(--radius); padding: 16px 20px; margin: 20px 0;
+    }
+    .callout p { color: var(--text); margin: 0; font-size: 0.9rem; }
+    .callout strong { color: var(--accent-dark); }
+
+    /* FOOTER */
+    footer { background: #0f172a; color: #94a3b8; padding: 40px 24px; }
+    .footer-inner {
+      max-width: 1080px; margin: 0 auto;
+      display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 16px;
+    }
+    .footer-brand { font-size: 0.875rem; color: #cbd5e1; }
+    .footer-brand span { color: #64748b; font-size: 0.8rem; display: block; margin-top: 3px; }
+    .footer-links { display: flex; gap: 20px; list-style: none; }
+    .footer-links a { font-size: 0.8rem; color: #64748b; text-decoration: none; transition: color 0.15s; }
+    .footer-links a:hover { color: #cbd5e1; }
+
+    @media (max-width: 700px) {
+      .nav-links { display: none; flex-direction: column; position: absolute; top: var(--nav-h); left: 0; right: 0; background: #fff; border-bottom: 1px solid var(--border); padding: 16px 24px; gap: 4px; }
+      .nav-links.open { display: flex; }
+      .nav-links .btn-nav { align-self: flex-start; }
+      .nav-toggle { display: flex; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <header class="nav">
+    <div class="nav-inner">
+      <a class="nav-logo" href="/index.html">
+        <img src="/images/MileZeroLogo1.png" alt="Mile Zero Enterprises">
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="/index.html">Home</a></li>
+        <li><a href="/services.html">Services</a></li>
+        <li><a href="/public/contact/index.html" class="btn-nav">Contact Us</a></li>
+      </ul>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+        <svg width="22" height="22" viewBox="0 0 22 22" fill="none">
+          <rect y="3" width="22" height="2" rx="1" fill="currentColor"/>
+          <rect y="10" width="22" height="2" rx="1" fill="currentColor"/>
+          <rect y="17" width="22" height="2" rx="1" fill="currentColor"/>
+        </svg>
+      </button>
+    </div>
+  </header>
+
+  <!-- PAGE HEADER -->
+  <div class="page-header">
+    <div class="page-header-inner">
+      <span class="section-label">Legal</span>
+      <h1>Privacy Policy</h1>
+      <p class="meta">Mile Zero Enterprises, LLC &nbsp;·&nbsp; Last updated: May 2026</p>
+    </div>
+  </div>
+
+  <!-- CONTENT -->
+  <div class="content-wrap">
+
+    <div class="callout">
+      <p><strong>Summary:</strong> We collect minimal information — only what you voluntarily submit via our contact form and anonymized analytics data. We do not sell your information to third parties.</p>
+    </div>
+
+    <h2>1. Who We Are</h2>
+    <p>Mile Zero Enterprises, LLC ("Mile Zero," "we," "us," or "our") is a technical product development and consulting firm based in the New Orleans, Louisiana area. This Privacy Policy applies to our website at <a href="https://www.milezeroenterprises.com">milezeroenterprises.com</a> and any related pages hosted under that domain.</p>
+
+    <h2>2. Information We Collect</h2>
+    <p>We collect information in two ways:</p>
+
+    <p><strong>Information you provide directly</strong> — When you submit our contact form, we collect:</p>
+    <ul>
+      <li>Your email address</li>
+      <li>The topic of your inquiry (e.g., general inquiry or account deletion request)</li>
+      <li>The message content you provide</li>
+    </ul>
+
+    <p><strong>Information collected automatically</strong> — When you visit our website, we use Google Analytics to collect anonymized usage data, including:</p>
+    <ul>
+      <li>Pages visited and time spent on each page</li>
+      <li>General geographic region (country/city level)</li>
+      <li>Device type, browser, and operating system</li>
+      <li>Referring website or search terms that brought you here</li>
+    </ul>
+    <p>This data is aggregated and anonymized. We cannot identify individual visitors through Google Analytics.</p>
+
+    <h2>3. How We Use Your Information</h2>
+    <p>We use the information we collect solely to:</p>
+    <ul>
+      <li>Respond to your inquiries and provide requested services</li>
+      <li>Process account deletion requests for our mobile applications</li>
+      <li>Understand how visitors use our website so we can improve it</li>
+      <li>Communicate with you about our services if you have initiated contact</li>
+    </ul>
+    <p>We do not use your information for automated decision-making, profiling, or marketing without your explicit consent.</p>
+
+    <h2>4. Information Sharing</h2>
+    <p>We do not sell, rent, or trade your personal information. We may share information only in these limited circumstances:</p>
+    <ul>
+      <li><strong>Service providers:</strong> We use Firebase (Google) to process contact form submissions and Google Analytics for site analytics. These providers process data on our behalf under their respective privacy policies.</li>
+      <li><strong>Legal requirements:</strong> We may disclose information if required to do so by law or in response to valid legal requests.</li>
+      <li><strong>Business transfers:</strong> If Mile Zero Enterprises is acquired or merges with another company, your information may be transferred as part of that transaction.</li>
+    </ul>
+
+    <h2>5. Data Retention</h2>
+    <p>Contact form submissions are retained for as long as necessary to respond to your inquiry and for a reasonable period thereafter for record-keeping purposes. You may request deletion of your data at any time by contacting us.</p>
+    <p>Google Analytics data is retained per Google's standard retention settings (26 months by default) and is anonymized.</p>
+
+    <h2>6. Your Rights</h2>
+    <p>You have the right to:</p>
+    <ul>
+      <li>Request access to the personal information we hold about you</li>
+      <li>Request correction of inaccurate information</li>
+      <li>Request deletion of your personal information</li>
+      <li>Opt out of Google Analytics tracking by using the <a href="https://tools.google.com/dlpage/gaoptout" target="_blank" rel="noopener">Google Analytics Opt-out Browser Add-on</a></li>
+    </ul>
+    <p>To exercise any of these rights, please use our <a href="/public/contact/index.html">contact form</a>.</p>
+
+    <h2>7. Cookies</h2>
+    <p>Our website uses cookies solely through Google Analytics to distinguish unique visitors and analyze site usage. These are analytics cookies only — we do not use advertising, tracking, or third-party marketing cookies. You can control cookie settings through your browser preferences.</p>
+
+    <h2>8. Children's Privacy</h2>
+    <p>Our website is not directed at children under 13 years of age, and we do not knowingly collect personal information from children. If you believe we have inadvertently collected such information, please contact us immediately.</p>
+
+    <h2>9. Changes to This Policy</h2>
+    <p>We may update this Privacy Policy from time to time. When we do, we will update the "Last updated" date at the top of this page. We encourage you to review this policy periodically.</p>
+
+    <h2>10. Contact Us</h2>
+    <p>If you have any questions about this Privacy Policy or how we handle your information, please reach out through our <a href="/public/contact/index.html">contact form</a>.</p>
+    <p>Mile Zero Enterprises, LLC<br>New Orleans area, Louisiana</p>
+
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-brand">
+        Mile Zero Enterprises, LLC
+        <span>New Orleans area, Louisiana</span>
+      </div>
+      <ul class="footer-links">
+        <li><a href="/index.html">Home</a></li>
+        <li><a href="/services.html">Services</a></li>
+        <li><a href="/public/contact/index.html">Contact</a></li>
+        <li><a href="/privacy/index.html">Privacy</a></li>
+      </ul>
+      <div style="font-size: 0.78rem; color: #475569;">
+        &copy; <script>document.write(new Date().getFullYear())</script> Mile Zero Enterprises
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('navToggle').addEventListener('click', function() {
+      document.getElementById('navLinks').classList.toggle('open');
+    });
+  </script>
+
+</body>
+</html>
