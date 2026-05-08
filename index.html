@@ -1,97 +1,521 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mile Zero Enterprises - Home</title>
-    <style>
-        body { font-family: Arial, sans-serif; margin: 0; padding: 0; }
-        .header { background-color: #333; color: #fff; padding: 1em; text-align: center; }
-        .content { padding: 2em; max-width: 800px; margin: auto; }
-        h1 { 
-            color: #333; 
-            font-size: 2.5em; 
-            margin-bottom: 0.5em;
-        }
-        .header h1 {
-            color: #fff; 
-            font-size: 3em; 
-        }
-        nav ul { 
-            list-style: none; 
-            padding: 0; 
-            text-align: center; 
-            background-color: #444;
-            margin: 0;
-        }
-        nav ul li {
-            display: inline;
-            margin: 0 15px;
-        }
-        nav ul li a {
-            color: #fff;
-            text-decoration: none;
-        }
-        p { line-height: 1.6; color: #666; }
-    .logo {
-        max-width: 350px; /* Adjust size as needed */
-        height: auto;
-        display: block;
-        margin: 0 auto 10px; /* Center and add spacing */
-    }
-    </style>
-    <meta name="description" content="Mile Zero Enterprises specializes in technical product development, engineering services, and consulting to help businesses turn concepts into reality.">
-    <meta name="keywords" content="product development, technical consulting, engineering services, product management, Mile Zero Enterprises, AI product management">
-    <meta name="author" content="Mile Zero Enterprises">
-    <meta property="og:title" content="Mile Zero Enterprises">
-    <meta property="og:description" content="Expert technical product development and consulting services.">
-    <meta property="og:image" content="https://www.milezeroenterprises.com/images/MileZeroLogo1.png">
-    <meta property="og:image:width" content="1200">
-    <meta property="og:image:height" content="630">
-    <meta property="og:url" content="https://www.milezeroenterprises.com/">
-    <meta name="twitter:card" content="summary_large_image">
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-BKB4HV8Q8Z"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mile Zero Enterprises - Home</title>
 
-        gtag('config', 'G-BKB4HV8Q8Z');
-    </script>
+  <!-- SEO -->
+  <meta name="description" content="Mile Zero Enterprises specializes in technical product development, engineering services, and consulting to help businesses turn concepts into reality.">
+  <meta name="keywords" content="product development, technical consulting, engineering services, product management, Mile Zero Enterprises, AI product management">
+  <meta name="author" content="Mile Zero Enterprises">
+  <meta property="og:title" content="Mile Zero Enterprises">
+  <meta property="og:description" content="Expert technical product development and consulting services.">
+  <meta property="og:image" content="https://www.milezeroenterprises.com/images/MileZeroLogo1.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:url" content="https://www.milezeroenterprises.com/">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-BKB4HV8Q8Z"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-BKB4HV8Q8Z');
+  </script>
+
+  <style>
+    /* ===== DESIGN SYSTEM ===== */
+    :root {
+      --bg:          #f8fafc;
+      --surface:     #ffffff;
+      --border:      #e2e8f0;
+      --text:        #0f172a;
+      --muted:       #64748b;
+      --accent:      #0e7490;
+      --accent-dark: #155e75;
+      --accent-bg:   #ecfeff;
+      --accent-border: #a5f3fc;
+      --nav-h:       64px;
+      --radius:      14px;
+      --shadow:      0 1px 3px rgba(0,0,0,0.07), 0 4px 16px rgba(0,0,0,0.06);
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Inter', system-ui, -apple-system, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    /* ===== NAV ===== */
+    .nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      height: var(--nav-h);
+      background: rgba(255,255,255,0.92);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+    }
+    .nav-inner {
+      max-width: 1080px;
+      margin: 0 auto;
+      padding: 0 24px;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .nav-logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      text-decoration: none;
+      color: var(--text);
+    }
+    .nav-logo img {
+      height: 44px;
+      width: auto;
+    }
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      list-style: none;
+    }
+    .nav-links a {
+      text-decoration: none;
+      color: var(--muted);
+      font-size: 0.875rem;
+      font-weight: 500;
+      padding: 6px 14px;
+      border-radius: 8px;
+      transition: color 0.15s, background 0.15s;
+    }
+    .nav-links a:hover { color: var(--text); background: var(--bg); }
+    .nav-links a.active { color: var(--accent); }
+    .nav-links .btn-nav {
+      background: var(--accent);
+      color: #fff !important;
+      padding: 7px 16px;
+      border-radius: 8px;
+    }
+    .nav-links .btn-nav:hover { background: var(--accent-dark); }
+
+    /* Mobile menu toggle */
+    .nav-toggle {
+      display: none;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 6px;
+      color: var(--text);
+    }
+    .nav-toggle svg { display: block; }
+
+    /* ===== HERO ===== */
+    .hero {
+      padding: 80px 24px 72px;
+      text-align: center;
+    }
+    .hero-logo {
+      max-width: 220px;
+      height: auto;
+      margin: 0 auto 28px;
+      display: block;
+    }
+    .hero h1 {
+      font-size: clamp(2rem, 1.4rem + 2vw, 3.2rem);
+      font-weight: 800;
+      line-height: 1.15;
+      letter-spacing: -0.02em;
+      color: var(--text);
+      max-width: 680px;
+      margin: 0 auto 16px;
+    }
+    .hero h1 span { color: var(--accent); }
+    .hero-sub {
+      font-size: clamp(1rem, 0.85rem + 0.5vw, 1.2rem);
+      color: var(--muted);
+      max-width: 520px;
+      margin: 0 auto 36px;
+    }
+    .hero-ctas {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      justify-content: center;
+    }
+    .btn-primary {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--accent);
+      color: #fff;
+      font-weight: 600;
+      font-size: 0.95rem;
+      padding: 12px 24px;
+      border-radius: var(--radius);
+      text-decoration: none;
+      border: none;
+      cursor: pointer;
+      transition: background 0.15s, transform 0.1s;
+    }
+    .btn-primary:hover { background: var(--accent-dark); transform: translateY(-1px); }
+    .btn-outline {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: transparent;
+      color: var(--text);
+      font-weight: 600;
+      font-size: 0.95rem;
+      padding: 12px 24px;
+      border-radius: var(--radius);
+      text-decoration: none;
+      border: 1.5px solid var(--border);
+      transition: border-color 0.15s, background 0.15s, transform 0.1s;
+    }
+    .btn-outline:hover {
+      border-color: var(--accent);
+      color: var(--accent);
+      background: var(--accent-bg);
+      transform: translateY(-1px);
+    }
+
+    /* ===== SECTION SCAFFOLDING ===== */
+    .section { padding: 72px 24px; }
+    .section-inner { max-width: 1080px; margin: 0 auto; }
+    .section-label {
+      display: inline-block;
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--accent);
+      background: var(--accent-bg);
+      border: 1px solid var(--accent-border);
+      padding: 4px 12px;
+      border-radius: 999px;
+      margin-bottom: 14px;
+    }
+    .section-title {
+      font-size: clamp(1.5rem, 1.2rem + 1vw, 2rem);
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      color: var(--text);
+      margin-bottom: 12px;
+    }
+    .section-body {
+      font-size: 1rem;
+      color: var(--muted);
+      max-width: 620px;
+      line-height: 1.7;
+    }
+
+    /* ===== ABOUT ===== */
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 48px;
+      align-items: start;
+      margin-top: 48px;
+    }
+    .about-text p { color: var(--muted); line-height: 1.75; font-size: 1rem; margin-bottom: 16px; }
+    .about-text p:last-child { margin-bottom: 0; }
+
+    .pillars {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+    .pillar {
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 16px 18px;
+      box-shadow: var(--shadow);
+    }
+    .pillar-icon {
+      width: 38px;
+      height: 38px;
+      border-radius: 10px;
+      background: var(--accent-bg);
+      border: 1px solid var(--accent-border);
+      display: grid;
+      place-items: center;
+      flex-shrink: 0;
+      color: var(--accent);
+    }
+    .pillar-content h4 {
+      font-size: 0.875rem;
+      font-weight: 600;
+      color: var(--text);
+      margin-bottom: 2px;
+    }
+    .pillar-content p {
+      font-size: 0.8rem;
+      color: var(--muted);
+      line-height: 1.5;
+      margin: 0;
+    }
+
+    /* ===== INSPIRATION ===== */
+    .inspiration { background: var(--surface); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+    .inspiration-inner {
+      max-width: 760px;
+      margin: 0 auto;
+      text-align: center;
+      padding: 72px 24px;
+    }
+    .bridge-icon {
+      width: 56px;
+      height: 56px;
+      border-radius: 16px;
+      background: var(--accent-bg);
+      border: 1px solid var(--accent-border);
+      display: grid;
+      place-items: center;
+      margin: 0 auto 20px;
+      color: var(--accent);
+    }
+    .inspiration-inner blockquote {
+      font-size: clamp(1.1rem, 0.9rem + 0.6vw, 1.4rem);
+      font-weight: 600;
+      color: var(--text);
+      line-height: 1.5;
+      letter-spacing: -0.01em;
+      margin-bottom: 16px;
+    }
+    .inspiration-inner p {
+      font-size: 0.95rem;
+      color: var(--muted);
+      line-height: 1.7;
+    }
+
+    /* ===== CONTACT CTA ===== */
+    .cta-band {
+      background: var(--accent);
+      padding: 64px 24px;
+      text-align: center;
+    }
+    .cta-band h2 {
+      font-size: clamp(1.5rem, 1.2rem + 1vw, 2rem);
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: 10px;
+    }
+    .cta-band p {
+      font-size: 1rem;
+      color: rgba(255,255,255,0.8);
+      margin-bottom: 28px;
+    }
+    .btn-white {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: #fff;
+      color: var(--accent-dark);
+      font-weight: 700;
+      font-size: 0.95rem;
+      padding: 12px 28px;
+      border-radius: var(--radius);
+      text-decoration: none;
+      transition: transform 0.1s, box-shadow 0.15s;
+    }
+    .btn-white:hover { transform: translateY(-1px); box-shadow: 0 6px 20px rgba(0,0,0,0.15); }
+
+    /* ===== FOOTER ===== */
+    footer {
+      background: #0f172a;
+      color: #94a3b8;
+      padding: 40px 24px;
+    }
+    .footer-inner {
+      max-width: 1080px;
+      margin: 0 auto;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+    }
+    .footer-brand {
+      font-size: 0.875rem;
+      color: #cbd5e1;
+    }
+    .footer-brand span { color: #64748b; font-size: 0.8rem; display: block; margin-top: 3px; }
+    .footer-links {
+      display: flex;
+      gap: 20px;
+      list-style: none;
+    }
+    .footer-links a {
+      font-size: 0.8rem;
+      color: #64748b;
+      text-decoration: none;
+      transition: color 0.15s;
+    }
+    .footer-links a:hover { color: #cbd5e1; }
+
+    /* ===== RESPONSIVE ===== */
+    @media (max-width: 700px) {
+      .about-grid { grid-template-columns: 1fr; gap: 32px; }
+      .nav-links { display: none; flex-direction: column; position: absolute; top: var(--nav-h); left: 0; right: 0; background: #fff; border-bottom: 1px solid var(--border); padding: 16px 24px; gap: 4px; }
+      .nav-links.open { display: flex; }
+      .nav-links .btn-nav { align-self: flex-start; }
+      .nav-toggle { display: flex; }
+    }
+  </style>
 </head>
 <body>
-    <div class="header">
-        <img src="images/MileZeroLogo1.png" alt="Mile Zero Enterprises Logo" class="logo">
-        <h1>Mile Zero Enterprises</h1>
-        <p>Your vision, our expertise. We help you make it happen.</p>
-    </div>
-    <nav>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="services.html">Services</a></li>
-        </ul>
-    </nav>
-    <div class="content">
-        <h2>About Us</h2>
-        <p>
-            At Mile Zero, we make technical product development straightforward, guiding you 
-            every step toward your goals.
 
-            We specialize in end-to-end technical product development, engineering services, 
-            and consulting to help you launch successful products. Whether you are an established
-            engineering team or a technical marketing organization not getting what you need from
-            internal resources, we empower businesses to turn innovative concepts into reality with 
-            expert guidance in technical product development, from idea inception to market launch.
-        </p>
-        <h3>Our Inspiration</h3>
-        <p> 
-            At Mile Zero, product engineering is a passion.  We are based in the New Orleans area
-            and have spent countless hours driving across the Lake Pontchartrain Causeway Bridge.
-            This unique commute inspires our approach: start at Mile Zero, immerse yourself in the challenge, and charge ahead.
-        </p>
-        <h2>Contact Us</h2>
-        <p>If you are interested in our services, please reach out using our <a href="/public/contact/index.html">contact form</a> for a free consultation and quote.</p>
+  <!-- NAV -->
+  <header class="nav">
+    <div class="nav-inner">
+      <a class="nav-logo" href="index.html">
+        <img src="images/MileZeroLogo1.png" alt="Mile Zero Enterprises">
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="/public/contact/index.html" class="btn-nav">Contact Us</a></li>
+      </ul>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+        <svg width="22" height="22" viewBox="0 0 22 22" fill="none">
+          <rect y="3" width="22" height="2" rx="1" fill="currentColor"/>
+          <rect y="10" width="22" height="2" rx="1" fill="currentColor"/>
+          <rect y="17" width="22" height="2" rx="1" fill="currentColor"/>
+        </svg>
+      </button>
     </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero">
+    <img src="images/MileZeroLogo1.png" alt="Mile Zero Enterprises Logo" class="hero-logo">
+    <h1>Your vision,<br><span>our expertise.</span><br>We make it happen.</h1>
+    <p class="hero-sub">End-to-end technical product development, engineering services, and consulting — from idea inception to market launch.</p>
+    <div class="hero-ctas">
+      <a href="/public/contact/index.html" class="btn-primary">
+        Get a Free Consultation
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+      <a href="services.html" class="btn-outline">
+        Our Services
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="section" style="background: var(--surface); border-top: 1px solid var(--border);">
+    <div class="section-inner">
+      <span class="section-label">About Us</span>
+      <h2 class="section-title">Making technical development straightforward</h2>
+      <div class="about-grid">
+        <div class="about-text">
+          <p>At Mile Zero, we specialize in end-to-end technical product development, engineering services, and consulting to help you launch successful products.</p>
+          <p>Whether you are an established engineering team or a technical marketing organization not getting what you need from internal resources, we empower businesses to turn innovative concepts into reality — from idea inception to market launch.</p>
+          <p>We bring 10+ years of hands-on experience across embedded systems, AI integration, process development, and manufacturing to every engagement.</p>
+        </div>
+        <div class="pillars">
+          <div class="pillar">
+            <div class="pillar-icon">
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="3" stroke="currentColor" stroke-width="1.5"/><path d="M10 2v2M10 16v2M2 10h2M16 10h2M4.22 4.22l1.42 1.42M14.36 14.36l1.42 1.42M4.22 15.78l1.42-1.42M14.36 5.64l1.42-1.42" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+            </div>
+            <div class="pillar-content">
+              <h4>10+ Years of Engineering Experience</h4>
+              <p>Deep expertise across embedded systems, AI tooling, and complex hardware/software products.</p>
+            </div>
+          </div>
+          <div class="pillar">
+            <div class="pillar-icon">
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M4 10l4 4 8-8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+            <div class="pillar-content">
+              <h4>Concept to Market, End-to-End</h4>
+              <p>We guide you through every phase — requirements, development, manufacturing, and launch.</p>
+            </div>
+          </div>
+          <div class="pillar">
+            <div class="pillar-icon">
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M10 2a8 8 0 100 16A8 8 0 0010 2z" stroke="currentColor" stroke-width="1.5"/><path d="M10 6v4l3 2" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+            </div>
+            <div class="pillar-content">
+              <h4>Built for Small Teams</h4>
+              <p>Flexible engagement models — from full outsourcing to focused advisory support.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- INSPIRATION -->
+  <section class="inspiration">
+    <div class="inspiration-inner">
+      <div class="bridge-icon">
+        <svg width="28" height="28" viewBox="0 0 28 28" fill="none"><path d="M2 20h24M2 20V14M26 20V14M2 14c4-6 8-8 12-8s8 2 12 8M8 14v6M14 10v10M20 14v6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </div>
+      <blockquote>"Start at Mile Zero, immerse yourself in the challenge, and charge ahead."</blockquote>
+      <p>We are based in the New Orleans area and have spent countless hours driving across the Lake Pontchartrain Causeway Bridge. This iconic crossing — starting at Mile Zero — inspires our philosophy: every great product starts somewhere. We help you own that starting line and drive all the way to the finish.</p>
+    </div>
+  </section>
+
+  <!-- CONTACT CTA -->
+  <section class="cta-band">
+    <h2>Ready to turn your concept into reality?</h2>
+    <p>Reach out for a free consultation. No obligation — just a conversation about your goals.</p>
+    <a href="/public/contact/index.html" class="btn-white">
+      Get in Touch
+      <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </a>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-brand">
+        Mile Zero Enterprises, LLC
+        <span>New Orleans area, Louisiana</span>
+      </div>
+      <ul class="footer-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="/public/contact/index.html">Contact</a></li>
+        <li><a href="/privacy">Privacy</a></li>
+      </ul>
+      <div style="font-size: 0.78rem; color: #475569;">
+        &copy; <script>document.write(new Date().getFullYear())</script> Mile Zero Enterprises
+      </div>
+    </div>
+  </footer>
+
+  <!-- Mobile nav toggle -->
+  <script>
+    document.getElementById('navToggle').addEventListener('click', function() {
+      document.getElementById('navLinks').classList.toggle('open');
+    });
+  </script>
+
 </body>
 </html>
