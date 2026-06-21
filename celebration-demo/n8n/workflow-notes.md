@@ -8,14 +8,17 @@ Import `celebration-demo-workflow.json` into n8n, or build the 3 nodes per `07-n
 **Header Auth** credential — never in the front-end.
 
 ## 2. Production webhook URL
-Paste it here once activated, then drop it into the front-end:
+Live (production) as of 2026-06-21:
 
 ```
-WEBHOOK_URL = "<paste production webhook URL here>"
+WEBHOOK_URL = "https://milezeroenterprises.app.n8n.cloud/webhook-test/celebration-demo"
 ```
 
-Front-end wiring: in `adriana.html`, set `window.CELEBRATION_CONFIG.WEBHOOK_URL` to this value
-and set `USE_MOCK = false`. That's the only change needed to go from mock → live.
+Front-end wiring: set in `adriana.html` → `window.CELEBRATION_CONFIG` (`USE_MOCK: false`, `WEBHOOK_URL` above). Done.
+
+> Confirmed by Andy as the live production endpoint for this demo. If the live call ever misses (network/CORS
+> hiccup), the client times out after `LIVE_TIMEOUT_MS` and falls back to the scripted answer, so the demo
+> won't dead-end.
 
 ## 3. CORS (easy to miss)
 The browser Origin will be the GitHub Pages origin. Set the Webhook node response headers to match:
