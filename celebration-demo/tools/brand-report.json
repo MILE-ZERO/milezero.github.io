@@ -1,0 +1,378 @@
+{
+  "https://celebrationhomes.com/": {
+    "url": "https://celebrationhomes.com/",
+    "colorCount": {
+      "rgb(0, 0, 0)": 97,
+      "rgb(51, 51, 51)": 298,
+      "rgb(102, 102, 102)": 1,
+      "rgb(208, 37, 46)": 223,
+      "rgb(255, 255, 255)": 61,
+      "rgb(50, 50, 50)": 201,
+      "rgb(54, 54, 54)": 15,
+      "rgb(255, 0, 12)": 14,
+      "rgb(128, 128, 128)": 2
+    },
+    "bgCount": {
+      "rgba(0, 0, 0, 0)": 832,
+      "rgb(255, 255, 255)": 21,
+      "rgb(255, 207, 0)": 1,
+      "rgba(0, 0, 0, 0.4)": 1,
+      "rgba(255, 255, 255, 0)": 1,
+      "rgba(0, 0, 0, 0.15)": 1,
+      "rgba(0, 0, 0, 0.5)": 4,
+      "rgba(0, 0, 0, 0.51)": 2,
+      "rgb(208, 37, 46)": 9,
+      "rgb(247, 247, 247)": 1,
+      "rgb(142, 23, 4)": 2,
+      "rgb(93, 130, 209)": 1,
+      "rgba(0, 0, 0, 0.2)": 4,
+      "rgb(0, 159, 239)": 1,
+      "rgb(35, 140, 200)": 1,
+      "rgb(138, 138, 138)": 1,
+      "rgb(234, 234, 234)": 29
+    },
+    "fonts": {
+      "sans-serif": 82,
+      "Poppins, sans-serif": 622,
+      "\"Zalando Sans\", sans-serif": 57,
+      "FontAwesome": 22,
+      "Quicksand, sans-serif": 40,
+      "Montserrat, sans-serif": 13,
+      "\"Open Sans Condensed\", sans-serif": 75,
+      "themify": 1
+    },
+    "buttons": [
+      {
+        "text": "GET STARTED",
+        "bg": "rgba(0, 0, 0, 0)",
+        "color": "rgb(51, 51, 51)",
+        "border": "0px none rgb(51, 51, 51)",
+        "borderRadius": "0px",
+        "font": "Poppins, sans-serif",
+        "fontWeight": "400",
+        "textTransform": "none",
+        "padding": "0px",
+        "letterSpacing": "normal"
+      },
+      {
+        "text": "GET STARTED",
+        "bg": "rgb(208, 37, 46)",
+        "color": "rgb(255, 255, 255)",
+        "border": "2px solid rgb(208, 37, 46)",
+        "borderRadius": "30px",
+        "font": "Montserrat, sans-serif",
+        "fontWeight": "400",
+        "textTransform": "uppercase",
+        "padding": "12px 20px",
+        "letterSpacing": "1px"
+      },
+      {
+        "text": "VIEW ALL COMMUNITIES",
+        "bg": "rgb(208, 37, 46)",
+        "color": "rgb(255, 255, 255)",
+        "border": "2px solid rgb(208, 37, 46)",
+        "borderRadius": "30px",
+        "font": "Montserrat, sans-serif",
+        "fontWeight": "400",
+        "textTransform": "uppercase",
+        "padding": "12px 20px",
+        "letterSpacing": "1px"
+      },
+      {
+        "text": "CONTACT US NOW",
+        "bg": "rgb(255, 255, 255)",
+        "color": "rgb(208, 37, 46)",
+        "border": "2px solid rgb(208, 37, 46)",
+        "borderRadius": "30px",
+        "font": "Montserrat, sans-serif",
+        "fontWeight": "400",
+        "textTransform": "uppercase",
+        "padding": "12px 20px",
+        "letterSpacing": "1px"
+      },
+      {
+        "text": "Submit",
+        "bg": "rgb(208, 37, 46)",
+        "color": "rgb(255, 255, 255)",
+        "border": "2px solid rgb(208, 37, 46)",
+        "borderRadius": "30px",
+        "font": "Montserrat, sans-serif",
+        "fontWeight": "400",
+        "textTransform": "uppercase",
+        "padding": "12px 20px",
+        "letterSpacing": "1px"
+      },
+      {
+        "text": "Request Visit/Tour",
+        "bg": "rgb(208, 37, 46)",
+        "color": "rgb(255, 255, 255)",
+        "border": "2px solid rgb(208, 37, 46)",
+        "borderRadius": "30px",
+        "font": "Montserrat, sans-serif",
+        "fontWeight": "400",
+        "textTransform": "uppercase",
+        "padding": "12px 20px",
+        "letterSpacing": "1px"
+      },
+      {
+        "text": "Request Visit/Tour",
+        "bg": "rgb(208, 37, 46)",
+        "color": "rgb(255, 255, 255)",
+        "border": "2px solid rgb(208, 37, 46)",
+        "borderRadius": "30px",
+        "font": "Montserrat, sans-serif",
+        "fontWeight": "400",
+        "textTransform": "uppercase",
+        "padding": "12px 20px",
+        "letterSpacing": "1px"
+      },
+      {
+        "text": "Submit",
+        "bg": "rgb(208, 37, 46)",
+        "color": "rgb(255, 255, 255)",
+        "border": "2px solid rgb(208, 37, 46)",
+        "borderRadius": "30px",
+        "font": "Montserrat, sans-serif",
+        "fontWeight": "400",
+        "textTransform": "uppercase",
+        "padding": "12px 20px",
+        "letterSpacing": "1px"
+      },
+      {
+        "text": "Submit",
+        "bg": "rgb(208, 37, 46)",
+        "color": "rgb(255, 255, 255)",
+        "border": "2px solid rgb(208, 37, 46)",
+        "borderRadius": "30px",
+        "font": "Montserrat, sans-serif",
+        "fontWeight": "400",
+        "textTransform": "uppercase",
+        "padding": "12px 20px",
+        "letterSpacing": "1px"
+      }
+    ],
+    "links": [],
+    "headings": [
+      {
+        "tag": "h1",
+        "font": "\"Zalando Sans\", sans-serif",
+        "weight": "400",
+        "size": "45px",
+        "color": "rgb(208, 37, 46)",
+        "transform": "none",
+        "letterSpacing": "normal"
+      },
+      {
+        "tag": "h2",
+        "font": "\"Zalando Sans\", sans-serif",
+        "weight": "400",
+        "size": "30px",
+        "color": "rgb(208, 37, 46)",
+        "transform": "none",
+        "letterSpacing": "normal"
+      },
+      {
+        "tag": "h3",
+        "font": "\"Zalando Sans\", sans-serif",
+        "weight": "400",
+        "size": "26px",
+        "color": "rgb(54, 54, 54)",
+        "transform": "none",
+        "letterSpacing": "normal"
+      }
+    ],
+    "logo": {
+      "src": "https://celebrationhomes.com/images/logo.png",
+      "alt": "Celebration Homes",
+      "w": 375,
+      "h": 85
+    },
+    "bodyFont": "Poppins, sans-serif",
+    "bodyColor": "rgb(51, 51, 51)",
+    "bodyBg": "rgb(255, 255, 255)",
+    "fontLinks": [
+      "https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&family=Nanum+Gothic:wght@400&family=Open+Sans+Condensed:wght@300&family=Quicksand:wght@400&family=Zalando+Sans:wght@400;700;900&family=Tinos:wght@400;700&family=Noto+Sans:wght@400;700&family=Host+Grotesk:wght@400;700&display=swap"
+    ]
+  },
+  "https://celebrationhomes.com/communities/ashlyn": {
+    "url": "https://celebrationhomes.com/communities/ashlyn",
+    "colorCount": {
+      "rgb(0, 0, 0)": 132,
+      "rgb(51, 51, 51)": 340,
+      "rgb(102, 102, 102)": 1,
+      "rgb(208, 37, 46)": 94,
+      "rgb(255, 255, 255)": 65,
+      "rgb(50, 50, 50)": 201,
+      "rgb(54, 54, 54)": 24,
+      "rgb(255, 0, 12)": 63,
+      "rgb(128, 128, 128)": 2
+    },
+    "bgCount": {
+      "rgba(0, 0, 0, 0)": 817,
+      "rgb(255, 255, 255)": 19,
+      "rgb(255, 207, 0)": 1,
+      "rgba(0, 0, 0, 0.4)": 1,
+      "rgb(239, 239, 239)": 20,
+      "rgb(132, 186, 63)": 2,
+      "rgb(221, 221, 221)": 9,
+      "rgb(208, 37, 46)": 9,
+      "rgb(247, 247, 247)": 2,
+      "rgb(138, 138, 138)": 5,
+      "rgb(142, 23, 4)": 1,
+      "rgb(93, 130, 209)": 1,
+      "rgba(0, 0, 0, 0.2)": 4,
+      "rgb(0, 159, 239)": 1,
+      "rgb(35, 140, 200)": 1,
+      "rgb(234, 234, 234)": 29
+    },
+    "fonts": {
+      "sans-serif": 77,
+      "Poppins, sans-serif": 679,
+      "\"Zalando Sans\", sans-serif": 44,
+      "FontAwesome": 49,
+      "Quicksand, sans-serif": 60,
+      "Lato, sans-serif": 1,
+      "Montserrat, sans-serif": 12
+    },
+    "buttons": [
+      {
+        "text": "CONTACT",
+        "bg": "rgb(208, 37, 46)",
+        "color": "rgb(255, 255, 255)",
+        "border": "2px solid rgb(208, 37, 46)",
+        "borderRadius": "30px",
+        "font": "Montserrat, sans-serif",
+        "fontWeight": "400",
+        "textTransform": "uppercase",
+        "padding": "12px 20px",
+        "letterSpacing": "1px"
+      },
+      {
+        "text": "REQUEST VISIT/TOUR",
+        "bg": "rgb(208, 37, 46)",
+        "color": "rgb(255, 255, 255)",
+        "border": "2px solid rgb(208, 37, 46)",
+        "borderRadius": "30px",
+        "font": "Montserrat, sans-serif",
+        "fontWeight": "400",
+        "textTransform": "uppercase",
+        "padding": "12px 20px",
+        "letterSpacing": "1px"
+      },
+      {
+        "text": "CONTACT US NOW",
+        "bg": "rgb(255, 255, 255)",
+        "color": "rgb(208, 37, 46)",
+        "border": "2px solid rgb(208, 37, 46)",
+        "borderRadius": "30px",
+        "font": "Montserrat, sans-serif",
+        "fontWeight": "400",
+        "textTransform": "uppercase",
+        "padding": "12px 20px",
+        "letterSpacing": "1px"
+      },
+      {
+        "text": "Submit",
+        "bg": "rgb(208, 37, 46)",
+        "color": "rgb(255, 255, 255)",
+        "border": "2px solid rgb(208, 37, 46)",
+        "borderRadius": "30px",
+        "font": "Montserrat, sans-serif",
+        "fontWeight": "400",
+        "textTransform": "uppercase",
+        "padding": "12px 20px",
+        "letterSpacing": "1px"
+      },
+      {
+        "text": "Request Visit/Tour",
+        "bg": "rgb(208, 37, 46)",
+        "color": "rgb(255, 255, 255)",
+        "border": "2px solid rgb(208, 37, 46)",
+        "borderRadius": "30px",
+        "font": "Montserrat, sans-serif",
+        "fontWeight": "400",
+        "textTransform": "uppercase",
+        "padding": "12px 20px",
+        "letterSpacing": "1px"
+      },
+      {
+        "text": "Request Visit/Tour",
+        "bg": "rgb(208, 37, 46)",
+        "color": "rgb(255, 255, 255)",
+        "border": "2px solid rgb(208, 37, 46)",
+        "borderRadius": "30px",
+        "font": "Montserrat, sans-serif",
+        "fontWeight": "400",
+        "textTransform": "uppercase",
+        "padding": "12px 20px",
+        "letterSpacing": "1px"
+      },
+      {
+        "text": "Submit",
+        "bg": "rgb(208, 37, 46)",
+        "color": "rgb(255, 255, 255)",
+        "border": "2px solid rgb(208, 37, 46)",
+        "borderRadius": "30px",
+        "font": "Montserrat, sans-serif",
+        "fontWeight": "400",
+        "textTransform": "uppercase",
+        "padding": "12px 20px",
+        "letterSpacing": "1px"
+      },
+      {
+        "text": "Submit",
+        "bg": "rgb(208, 37, 46)",
+        "color": "rgb(255, 255, 255)",
+        "border": "2px solid rgb(208, 37, 46)",
+        "borderRadius": "30px",
+        "font": "Montserrat, sans-serif",
+        "fontWeight": "400",
+        "textTransform": "uppercase",
+        "padding": "12px 20px",
+        "letterSpacing": "1px"
+      }
+    ],
+    "links": [],
+    "headings": [
+      {
+        "tag": "h1",
+        "font": "\"Zalando Sans\", sans-serif",
+        "weight": "600",
+        "size": "45px",
+        "color": "rgb(255, 255, 255)",
+        "transform": "capitalize",
+        "letterSpacing": "normal"
+      },
+      {
+        "tag": "h2",
+        "font": "\"Zalando Sans\", sans-serif",
+        "weight": "400",
+        "size": "30px",
+        "color": "rgb(255, 255, 255)",
+        "transform": "none",
+        "letterSpacing": "normal"
+      },
+      {
+        "tag": "h3",
+        "font": "\"Zalando Sans\", sans-serif",
+        "weight": "400",
+        "size": "26px",
+        "color": "rgb(208, 37, 46)",
+        "transform": "none",
+        "letterSpacing": "normal"
+      }
+    ],
+    "logo": {
+      "src": "https://celebrationhomes.com/images/logo.png",
+      "alt": "Celebration Homes",
+      "w": 375,
+      "h": 85
+    },
+    "bodyFont": "Poppins, sans-serif",
+    "bodyColor": "rgb(51, 51, 51)",
+    "bodyBg": "rgb(255, 255, 255)",
+    "fontLinks": [
+      "https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&family=Nanum+Gothic:wght@400&family=Open+Sans+Condensed:wght@300&family=Quicksand:wght@400&family=Zalando+Sans:wght@400;700;900&family=Tinos:wght@400;700&family=Noto+Sans:wght@400;700&family=Host+Grotesk:wght@400;700&display=swap"
+    ]
+  }
+}

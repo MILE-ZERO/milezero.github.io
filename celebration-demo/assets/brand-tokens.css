@@ -1,0 +1,118 @@
+/* =============================================================
+   Celebration Homes — brand tokens
+   Extracted Task 0 from celebrationhomes.com + /communities/ashlyn
+   via headless Chromium (see ../tools/extract-brand.js + brand-report.json).
+   Numbers below are the real computed values pulled from the live site.
+   ============================================================= */
+
+/* Fonts (Zalando Sans = headings, Poppins = body, Montserrat = buttons) are loaded
+   via <link> tags in each page's <head> — NOT @import here. An @import of a remote
+   font is render-blocking: it would stop every rule below (including all :root tokens)
+   from applying until Google Fonts responds, leaving the page as unstyled plain text
+   on slow/blocked networks. The system fallbacks below keep branding intact regardless. */
+
+:root {
+  /* ---- Palette (from extraction) ---- */
+  --cel-red: #d0252e;          /* signature brand red — headings, buttons, accents */
+  --cel-red-bright: #ff000c;   /* hover/active brighter red seen on site */
+  --cel-red-dark: #a81d24;     /* derived darker red for button hover */
+  --cel-ink: #333333;          /* body text */
+  --cel-ink-2: #323232;        /* near-black headings */
+  --cel-ink-3: #363636;        /* h3 grey */
+  --cel-black: #000000;
+  --cel-white: #ffffff;
+  --cel-grey-100: #f7f7f7;
+  --cel-grey-200: #efefef;
+  --cel-grey-300: #eaeaea;
+  --cel-grey-400: #dddddd;
+  --cel-grey-500: #8a8a8a;
+  --cel-green: #84ba3f;        /* rare accent (e.g. "available" tags) */
+  --cel-yellow: #ffcf00;       /* rare accent */
+
+  /* semantic aliases */
+  --color-primary: var(--cel-red);
+  --color-primary-hover: var(--cel-red-dark);
+  --color-text: var(--cel-ink);
+  --color-heading: var(--cel-ink-2);
+  --color-bg: var(--cel-white);
+  --color-bg-alt: var(--cel-grey-200);
+  --color-border: var(--cel-grey-400);
+
+  /* ---- Typography (from extraction) ---- */
+  --font-heading: "Zalando Sans", "Poppins", sans-serif;
+  --font-body: "Poppins", sans-serif;
+  --font-button: "Montserrat", sans-serif;
+
+  --h1-size: 45px;
+  --h2-size: 30px;
+  --h3-size: 26px;
+
+  /* ---- Buttons (from extraction: pill, uppercase, Montserrat) ---- */
+  --btn-radius: 30px;
+  --btn-padding: 12px 24px;
+  --btn-font: var(--font-button);
+  --btn-weight: 600;
+  --btn-transform: uppercase;
+  --btn-letter-spacing: 0.04em;
+
+  /* ---- Layout ---- */
+  --radius-card: 10px;
+  --shadow-card: 0 6px 24px rgba(0, 0, 0, 0.08);
+  --shadow-soft: 0 2px 10px rgba(0, 0, 0, 0.06);
+  --maxw: 1100px;
+  --space: 16px;
+}
+
+/* ---- Base element styling derived from the brand ---- */
+body {
+  font-family: var(--font-body);
+  color: var(--color-text);
+  background: var(--color-bg);
+  font-weight: 400;
+  line-height: 1.6;
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--font-heading);
+  color: var(--color-heading);
+  line-height: 1.2;
+}
+h1 { font-size: var(--h1-size); font-weight: 700; }
+h2 { font-size: var(--h2-size); font-weight: 700; }
+h3 { font-size: var(--h3-size); font-weight: 600; }
+
+a { color: var(--cel-red); }
+
+/* Brand button — matches the site's pill CTA */
+.btn {
+  display: inline-block;
+  font-family: var(--btn-font);
+  font-weight: var(--btn-weight);
+  text-transform: var(--btn-transform);
+  letter-spacing: var(--btn-letter-spacing);
+  border-radius: var(--btn-radius);
+  padding: var(--btn-padding);
+  border: 2px solid var(--cel-red);
+  background: var(--cel-red);
+  color: var(--cel-white);
+  text-decoration: none;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background 0.15s ease, color 0.15s ease, transform 0.05s ease;
+}
+.btn:hover { background: var(--cel-red-dark); border-color: var(--cel-red-dark); }
+.btn:active { transform: translateY(1px); }
+
+/* Inverse pill — white bg, red text (also on the live site) */
+.btn--inverse {
+  background: var(--cel-white);
+  color: var(--cel-red);
+}
+.btn--inverse:hover {
+  background: var(--cel-red);
+  color: var(--cel-white);
+}
+
+@media (max-width: 640px) {
+  :root { --h1-size: 32px; --h2-size: 24px; --h3-size: 20px; }
+}

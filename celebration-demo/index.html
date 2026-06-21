@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Celebration Homes - Nashville's Premiere Home Builder</title>
+  <meta name="description" content="Celebration Homes builds new homes with More Space and More Style across the Nashville, Tennessee area." />
+  <link rel="stylesheet" href="assets/fonts.css" />
+  <link rel="stylesheet" href="assets/brand-tokens.css" />
+  <link rel="stylesheet" href="assets/site.css" />
+</head>
+<body class="home">
+
+  <!-- Header (over hero, mimics celebrationhomes.com) -->
+  <header class="cel-header">
+    <div class="cel-header__inner">
+      <a class="cel-logo" href="index.html"><img src="assets/logo.svg" alt="Celebration Homes — More Space. More Style." /></a>
+      <button class="cel-burger" id="navBurger" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
+      <nav class="cel-nav" id="celNav">
+        <a href="#">Models</a>
+        <a href="#">Communities <i>&#9662;</i></a>
+        <a href="adriana.html">Quick Move-In Homes <i>&#9662;</i></a>
+        <a href="#">Virtual Tours <i>&#9662;</i></a>
+        <a href="#">About <i>&#9662;</i></a>
+        <a href="#">Warranty <i>&#9662;</i></a>
+        <a href="#">Financing</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero (full-width kitchen carousel look) -->
+  <section class="cel-hero">
+    <div class="cel-hero__img" role="img" aria-label="Bright, modern Celebration Homes kitchen"></div>
+    <button class="cel-hero__arrow left" aria-label="Previous">&#8249;</button>
+    <button class="cel-hero__arrow right" aria-label="Next">&#8250;</button>
+    <div class="cel-hero__badge" aria-hidden="true">
+      <span class="b-num">25</span>
+      <span class="b-yrs">YEARS</span>
+      <span class="b-cel">CELEBRATING</span>
+    </div>
+    <a class="cel-hero__phone" href="#" aria-label="Call us">
+      <svg viewBox="0 0 24 24" width="22" height="22" fill="#fff"><path d="M6.6 10.8a15.5 15.5 0 006.6 6.6l2.2-2.2a1 1 0 011-.24 11.4 11.4 0 003.6.58 1 1 0 011 1V20a1 1 0 01-1 1A17 17 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1 11.4 11.4 0 00.58 3.6 1 1 0 01-.24 1z"/></svg>
+    </a>
+  </section>
+
+  <!-- Intro text (kept exactly as celebrationhomes.com today) -->
+  <section class="cel-intro">
+    <div class="wrap">
+      <h1 class="cel-intro__title">Celebration Homes - Nashville's Premiere Home Builder</h1>
+      <p class="cel-intro__sub">Building with More Space and More Style</p>
+      <p class="cel-intro__body">Welcome to Celebration Homes, where we proudly creating new homes with <strong>"More Space and More Style"</strong> for families seeking quality, comfort, and exceptional value. Our innovative floor plans are designed to maximize living space while maintaining efficiency, offering modern layouts, designer finishes, and customizable options that make every home unique. As one of the top new home builders in Nashville, Celebration Homes delivers beautifully crafted homes tailored to every lifestyle, from growing families to empty nesters looking for stylish, low-maintenance living. Explore our new home communities, model homes, and floor plans to discover why Celebration Homes stands above the rest and how we can help you find the perfect new home in Nashville, Tennessee.</p>
+      <button class="btn cel-intro__cta" type="button" data-open-chat>
+        Ask the Advisor
+        <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor" aria-hidden="true" style="vertical-align:-2px;margin-left:6px"><path d="M4 4h16a2 2 0 012 2v9a2 2 0 01-2 2H9l-5 4V6a2 2 0 012-2z"/></svg>
+      </button>
+    </div>
+  </section>
+
+  <!-- Communities by City -->
+  <section class="cel-communities section-alt">
+    <div class="wrap">
+      <h2 class="section-title">Communities by City</h2>
+      <div class="city-grid">
+        <a href="#" class="city-card">Nashville</a>
+        <a href="#" class="city-card">Franklin</a>
+        <a href="#" class="city-card">Murfreesboro</a>
+        <a href="#" class="city-card">Nolensville</a>
+        <a href="#" class="city-card">Mount Juliet</a>
+        <a href="#" class="city-card">Spring Hill</a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <span class="demo-badge">Demo by Mile Zero Enterprises</span>
+      <p>This is a concept demo for Celebration Homes — not the live celebrationhomes.com site. Lead capture is disabled; no information is stored.</p>
+    </div>
+  </footer>
+
+  <!-- Floating AI advisor chat (lower-left bubble, like the site's chat widget) -->
+  <div class="chat-fab" id="chatFab">
+    <div class="chat-fab__window" id="chatWindow" hidden>
+      <div class="chat-panel" data-chat>
+        <div class="chat-head">
+          <span class="dot"></span>
+          <span class="title">Celebration Home Advisor</span>
+          <button class="chat-close" id="chatClose" aria-label="Close chat">&times;</button>
+        </div>
+        <div class="chat-log" data-chat-log></div>
+        <div class="chat-suggestions" data-chat-suggestions></div>
+        <form class="chat-form" data-chat-form>
+          <input type="text" data-chat-input placeholder="Type a message…" autocomplete="off" />
+          <button class="btn" type="submit">Send</button>
+        </form>
+      </div>
+    </div>
+    <button class="chat-fab__btn" id="chatFabBtn" aria-label="Chat with the Celebration advisor" aria-expanded="false">
+      <svg class="ic-chat" viewBox="0 0 24 24" width="26" height="26" fill="#fff" aria-hidden="true"><path d="M4 4h16a2 2 0 012 2v10a2 2 0 01-2 2H9l-5 4V6a2 2 0 012-2z"/></svg>
+      <svg class="ic-close" viewBox="0 0 24 24" width="24" height="24" fill="#fff" aria-hidden="true"><path d="M18.3 5.7L12 12l6.3 6.3-1.4 1.4L10.6 13.4 4.3 19.7 2.9 18.3 9.2 12 2.9 5.7 4.3 4.3l6.3 6.3 6.3-6.3z"/></svg>
+    </button>
+  </div>
+
+  <script src="assets/app.js"></script>
+  <script>
+    Celebration.initScriptedPage({ scenarioId: 'general_to_listing' });
+    Celebration.initChatWidget();
+    // mimic-site nav toggle (mobile)
+    (function () {
+      var b = document.getElementById('navBurger'), n = document.getElementById('celNav');
+      if (b && n) b.addEventListener('click', function () {
+        var open = n.classList.toggle('open');
+        b.setAttribute('aria-expanded', open ? 'true' : 'false');
+      });
+    })();
+  </script>
+</body>
+</html>

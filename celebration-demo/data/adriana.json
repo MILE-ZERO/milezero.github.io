@@ -1,0 +1,51 @@
+{
+  "_comment": "Adriana FLOORPLAN data (to-be-built, not a quick move-in). Specs match the real celebrationhomes.com/communities/ashlyn/adriana page. Options/finishes are sample ranges for the chat to ground on until Greg's full brochure data replaces them — keep this shape.",
+  "community": {
+    "name": "Ashlyn",
+    "builder": "Celebration Homes",
+    "area": "Middle Tennessee (Nashville metro)",
+    "url": "https://celebrationhomes.com/communities/ashlyn",
+    "tagline": "More Space and More Style",
+    "sales_manager": {
+      "name": "Greg Welton",
+      "title": "Sales Manager",
+      "phone": "(615) 414-5328",
+      "email": "Gwelton@celebrationtn.com"
+    }
+  },
+  "floorplan": {
+    "id": "adriana",
+    "name": "The Adriana",
+    "type": "To-be-built floorplan",
+    "beds": "4-5",
+    "baths": "3",
+    "sqft": 3249,
+    "garage": "2-3 Cars",
+    "stories": 2,
+    "timeline_note": "Built to order — most Adriana homes take about 6–12 months from contract to move-in, depending on selections and homesite.",
+    "highlights": ["downstairs flex/guest room", "open kitchen + great room", "owner's suite down", "optional 5th bedroom / bonus"],
+    "structural_options": [
+      { "id": "bonus_over_garage", "name": "Bonus room over garage", "adds_sqft": 320, "price_range": [18000, 26000] },
+      { "id": "fifth_bedroom", "name": "Optional 5th bedroom", "price_range": [12000, 18000] },
+      { "id": "covered_porch", "name": "Extended covered porch", "price_range": [6000, 9000] }
+    ],
+    "finish_packages": [
+      { "id": "designer_1", "name": "Designer Collection I", "price_range": [0, 0], "note": "included" },
+      { "id": "designer_2", "name": "Designer Collection II (upgraded)", "price_range": [12000, 22000] }
+    ],
+    "flooring_upgrades": [
+      { "id": "lvp_main", "name": "Luxury vinyl plank, main living", "price_range": [3500, 6000] },
+      { "id": "hardwood_main", "name": "Engineered hardwood, main living", "price_range": [7000, 12000] }
+    ]
+  },
+  "gallery": [
+    "assets/img/adriana/plan-1.jpg",
+    "assets/img/adriana/plan-2.jpg",
+    "assets/img/adriana/plan-3.jpg",
+    "assets/img/adriana/plan-4.jpg",
+    "assets/img/adriana/plan-5.jpg",
+    "assets/img/adriana/plan-6.jpg",
+    "assets/img/adriana/plan-7.jpg"
+  ],
+  "pdf_url": "#"
+}
