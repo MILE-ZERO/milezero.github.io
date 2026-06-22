@@ -1,5 +1,17 @@
 {
-  "_comment": "Adriana FLOORPLAN data (to-be-built, not a quick move-in). Specs match the real celebrationhomes.com/communities/ashlyn/adriana page. Options/finishes are sample ranges for the chat to ground on until Greg's full brochure data replaces them — keep this shape.",
+  "_comment": "Adriana FLOORPLAN data package for the Celebration Homes AI advisor demo. Specs, dimensions, elevations, and options are transcribed from the official Adriana brochure (Revised 8/20/2022, (c) 2022 Celebration Homes LLC). NO PRICING is published by Celebration; per Greg, pricing is handled by a sales agent, so price fields are intentionally omitted and the advisor must defer cost questions to Greg (see pricing_policy). This file replaces 06-adriana-data.sample.json and keeps the same shape.",
+  "source": {
+    "document": "ADRIANA BROCHURE_AUGUST 2022.pdf",
+    "revised": "2022-08-20",
+    "copyright": "(c) 2022 Celebration Homes LLC",
+    "disclaimer": "All specifications, features, equipment, landscape plans, dimensions, and prices are subject to change without notice. This is not part of a legal contract. All elevations are to be considered artist renderings and not deemed accurate to actual plans and specifications.",
+    "provided_by": "Greg Welton"
+  },
+  "pricing_policy": {
+    "publish_prices": false,
+    "rule": "Do NOT quote prices, price ranges, or option costs. Celebration Homes does not publish pricing; all pricing is handled one-on-one by a sales agent. If the buyer asks what something costs, acknowledge the question warmly, describe the feature, and route them to Greg Welton for current pricing and incentives.",
+    "deferral_contact": "Greg Welton, Sales Manager, (615) 414-5328, Gwelton@celebrationtn.com"
+  },
   "community": {
     "name": "Ashlyn",
     "builder": "Celebration Homes",
@@ -18,24 +30,79 @@
     "name": "The Adriana",
     "type": "To-be-built floorplan",
     "beds": "4-5",
-    "baths": "3",
-    "sqft": 3249,
+    "baths": "3-4",
     "garage": "2-3 Cars",
     "stories": 2,
-    "timeline_note": "Built to order — most Adriana homes take about 6–12 months from contract to move-in, depending on selections and homesite.",
-    "highlights": ["downstairs flex/guest room", "open kitchen + great room", "owner's suite down", "optional 5th bedroom / bonus"],
+    "owners_suite_location": "main level (down)",
+    "square_footage": {
+      "main_level": 2128,
+      "upper_level": 1121,
+      "total": 3249,
+      "unit": "sq.ft.",
+      "note": "Optional 11' vaulted ceiling adds approx. 14-25 sq.ft. depending on elevation; optional bath off Bedroom 5 adds approx. 50 sq.ft."
+    },
+    "elevations": [
+      { "id": "A", "name": "Elevation A", "image": "assets/img/adriana/plan-1.jpg", "note": "Shown with optional gooseneck fixture" },
+      { "id": "B", "name": "Elevation B", "image": "assets/img/adriana/plan-2.jpg", "note": "Shown with optional gooseneck fixture" },
+      { "id": "C", "name": "Elevation C", "image": "assets/img/adriana/plan-3.jpg" },
+      { "id": "D", "name": "Elevation D", "image": "assets/img/adriana/plan-4.jpg" }
+    ],
+    "timeline_note": "Built to order. Most Celebration homes take roughly 6-12 months from contract to move-in depending on selections and homesite. Confirm current build timing with Greg.",
+    "highlights": [
+      "Owner's retreat on the main level with 10' tray ceiling",
+      "Two-story vaulted great room",
+      "Open kitchen with walk-in pantry and optional islands",
+      "Main-level study (can convert to a downstairs bedroom)",
+      "Upstairs play room with vaulted ceiling and balcony overlooking the great room",
+      "Flexible 4-to-5 bedroom layout"
+    ],
+    "rooms": {
+      "main_level": [
+        { "name": "Owner's Retreat", "dimensions": "14'0\" x 18'0\"", "ceiling": "10' tray", "notes": "Walk-in closet 14'0\" x 10'10\"" },
+        { "name": "Owner's Bath", "notes": "60\" x 42\" acrylic shower pan with tiled walls and seat; optional garden tub; optional window" },
+        { "name": "Great Room", "dimensions": "19'0\" x 17'0\"", "ceiling": "2-story vaulted", "notes": "Optional fireplace; optional window" },
+        { "name": "Kitchen", "dimensions": "12'0\" x 15'0\"", "ceiling": "9' standard", "notes": "Walk-in pantry with (5) 16\" shelves; optional oven/microwave, optional island, optional butler's pantry" },
+        { "name": "Dining", "dimensions": "12'0\" x 13'0\"", "ceiling": "9' standard" },
+        { "name": "Study", "dimensions": "13'0\" x 10'2\"", "ceiling": "9' standard", "notes": "Optional French doors; can convert to main-level Bedroom 2" },
+        { "name": "Foyer / Entry", "notes": "Optional wrap porch / covered porch at entry" },
+        { "name": "Powder Room", "notes": "Main-level half bath" },
+        { "name": "Mud Room", "notes": "Optional bench, hooks, and cubbies" },
+        { "name": "Laundry", "notes": "Sink; optional upper/lower cabinets" },
+        { "name": "Garage", "notes": "Standard two-car; optional three-car (carriage)" }
+      ],
+      "upper_level": [
+        { "name": "Bedroom 3", "dimensions": "11'0\" x 14'0\"", "ceiling": "8' standard", "notes": "Walk-in closet; optional 10' vaulted ceiling" },
+        { "name": "Bedroom 4", "dimensions": "12'0\" x 11'0\"", "ceiling": "8' standard", "notes": "Optional 11' vaulted ceiling" },
+        { "name": "Bedroom 5 (optional)", "dimensions": "12'0\" x 11'0\"", "ceiling": "8' standard", "notes": "Optional double doors; optional bath off Bedroom 5 (adds ~50 sq.ft.)" },
+        { "name": "Bath", "notes": "Upstairs hall bath with linen closet" },
+        { "name": "Play Room", "dimensions": "20'0\" x 14'0\"", "ceiling": "9'-6\" vaulted", "notes": "Balcony; optional 10\" tray ceiling; open to great room below" }
+      ]
+    },
     "structural_options": [
-      { "id": "bonus_over_garage", "name": "Bonus room over garage", "adds_sqft": 320, "price_range": [18000, 26000] },
-      { "id": "fifth_bedroom", "name": "Optional 5th bedroom", "price_range": [12000, 18000] },
-      { "id": "covered_porch", "name": "Extended covered porch", "price_range": [6000, 9000] }
+      { "id": "third_car_garage", "name": "Optional third-car (carriage) garage", "category": "garage" },
+      { "id": "bedroom_5", "name": "Optional 5th bedroom upstairs", "category": "bedroom" },
+      { "id": "bath_off_bedroom_5", "name": "Optional bath off Bedroom 5", "adds_sqft": 50, "category": "bath" },
+      { "id": "main_level_bedroom_2", "name": "Convert main-level study to Bedroom 2", "category": "bedroom" },
+      { "id": "full_bath_2", "name": "Optional main-level full bath (in lieu of coat closet)", "category": "bath" },
+      { "id": "vault_11", "name": "Optional 11' vaulted ceiling (Bedroom 4)", "adds_sqft": 25, "category": "ceiling", "note": "Adds ~25 sq.ft. on Elevation A, ~14 sq.ft. on Elevation B" },
+      { "id": "vault_10", "name": "Optional 10' vaulted ceiling (Bedroom 3)", "category": "ceiling" },
+      { "id": "tray_ceiling_playroom", "name": "Optional 10\" tray ceiling in play room", "category": "ceiling" },
+      { "id": "great_room_fireplace", "name": "Optional great room fireplace", "category": "feature" },
+      { "id": "french_doors", "name": "Optional French doors (study and/or dining)", "category": "feature" },
+      { "id": "wrap_porch", "name": "Optional wrap-around / covered porch", "category": "exterior" },
+      { "id": "gooseneck_fixture", "name": "Optional gooseneck exterior light fixture", "category": "exterior" }
     ],
-    "finish_packages": [
-      { "id": "designer_1", "name": "Designer Collection I", "price_range": [0, 0], "note": "included" },
-      { "id": "designer_2", "name": "Designer Collection II (upgraded)", "price_range": [12000, 22000] }
+    "kitchen_options": [
+      { "id": "island_2", "name": "Optional kitchen island (Island 2 layout)" },
+      { "id": "island_3", "name": "Optional kitchen island (Island 3 layout)" },
+      { "id": "deeper_island", "name": "Deeper island with 12\" cabinets on the great room side" },
+      { "id": "cooktop", "name": "Optional cooktop in lieu of range" },
+      { "id": "butlers_pantry", "name": "Optional butler's pantry" },
+      { "id": "oven_micro", "name": "Optional wall oven / microwave configuration" }
     ],
-    "flooring_upgrades": [
-      { "id": "lvp_main", "name": "Luxury vinyl plank, main living", "price_range": [3500, 6000] },
-      { "id": "hardwood_main", "name": "Engineered hardwood, main living", "price_range": [7000, 12000] }
+    "owner_bath_options": [
+      { "id": "garden_tub", "name": "Optional garden tub" },
+      { "id": "bath_window", "name": "Optional owner's bath window" }
     ]
   },
   "gallery": [
@@ -47,5 +114,5 @@
     "assets/img/adriana/plan-6.jpg",
     "assets/img/adriana/plan-7.jpg"
   ],
-  "pdf_url": "#"
+  "pdf_url": "assets/img/adriana/adriana-floorplan.pdf"
 }

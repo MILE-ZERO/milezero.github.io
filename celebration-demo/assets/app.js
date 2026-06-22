@@ -21,6 +21,11 @@
     TYPING_MAX_MS: 1400
   }, window.CELEBRATION_CONFIG || {});
 
+  // Shared secret for the n8n webhook. NOT a real secret — it ships in client
+  // source and is visible to anyone who views it. It only deters casual/bot
+  // abuse of the public demo endpoint; the real API key stays in n8n.
+  var DEMO_KEY = 'chs_demo_8Kq2vR9xWp4n';
+
   // ---- tiny helpers ----
   function el(tag, cls, html) {
     var n = document.createElement(tag);
@@ -137,6 +142,10 @@
   function loadScenarios() { return fetch(CFG.SCENARIOS_URL).then(function (r) { return r.json(); }); }
   function findScenario(data, id) { return (data.scenarios || []).filter(function (s) { return s.id === id; })[0]; }
 
+  // Adriana floorplan facts, cached so live calls can ground Claude's answers.
+  var adrianaData = null;
+  function loadData() { return fetch(CFG.DATA_URL).then(function (r) { return r.json(); }); }
+
   // Anthropic needs messages starting with 'user' and alternating roles —
   // merge consecutive same-role turns and drop any leading assistant turns.
   function sanitizeForApi(history) {
@@ -246,16 +255,20 @@
     }
     var ctrl = new AbortController();
     var timer = setTimeout(function () { ctrl.abort(); }, CFG.LIVE_TIMEOUT_MS);
+    var payload = { scenario: 'listing_qa', demo_key: DEMO_KEY, messages: messages };
+    if (adrianaData) payload.adriana_data = adrianaData;
     return fetch(CFG.WEBHOOK_URL, {
       method: 'POST',
       headers: { 'content-type': 'application/json' },
-      body: JSON.stringify({ scenario: 'listing_qa', messages: messages }),
+      body: JSON.stringify(payload),
       signal: ctrl.signal
     }).then(function (r) {
       clearTimeout(timer);
+      if (r.status === 401) { var e = new Error('unauthorized'); e.unauthorized = true; throw e; }
       if (!r.ok) throw new Error('HTTP ' + r.status);
       return r.json();
     }).then(function (j) {
+      if (j && j.error === 'unauthorized') { var e2 = new Error('unauthorized'); e2.unauthorized = true; throw e2; }
       if (!j || !j.reply) throw new Error('no reply');
       return j.reply;
     });
@@ -265,6 +278,9 @@
     var root = document.querySelector('[data-chat]');
     if (!root) return;
     var ui = new ChatUI(root);
+
+    // grab floorplan facts for grounding (best-effort; chat works without them)
+    loadData().then(function (d) { adrianaData = d; }).catch(function () {});
 
     loadScenarios().then(function (data) {
       var sc = findScenario(data, opts.scenarioId || 'listing_qa') || {};
@@ -306,7 +322,11 @@
           ui.addBot(reply);
         }).catch(function (err) {
           typing.remove();
-          ui.addBot(bestFallback(userText), { fallback: true });
+          if (err && err.unauthorized) {
+            ui.addBot("This demo isn't available right now.", { fallback: true });
+          } else {
+            ui.addBot(bestFallback(userText), { fallback: true });
+          }
           if (window.console) console.warn('live call failed, used fallback:', err && err.message);
         }).then(function () {
           ui.setEnabled(true);
