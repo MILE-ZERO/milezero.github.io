@@ -1,0 +1,9 @@
+# This repo is the Pages site for milezeroenterprises.com.
+# The Celebration Homes demo lives at /celebration-demo/ and must NOT be indexed,
+# but the rest of the business site SHOULD be. So we disallow ONLY the demo subpath
+# here — a blanket "Disallow: /" would deindex the entire real site.
+# The per-page <meta name="robots" content="noindex,nofollow,noarchive"> tags inside
+# celebration-demo/*.html are the primary safeguard (robots.txt only requests that
+# compliant crawlers not fetch; it does not remove already-known URLs).
+User-agent: *
+Disallow: /celebration-demo/

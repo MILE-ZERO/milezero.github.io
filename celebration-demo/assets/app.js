@@ -396,6 +396,38 @@
     return location.search.indexOf('from=homepage') > -1;
   }
 
+  // ---- Persistent "DEMO" banner (styles in assets/demo-gate.css) ----
+  // Injected here so it's defined once and appears on both pages. It's
+  // dismissible, but reappears on every page load / navigation (we deliberately
+  // do NOT persist the dismissed state) so the disclaimer is always shown.
+  function injectDemoBanner() {
+    if (document.getElementById('demo-banner')) return;
+    var bar = el('div', null);
+    bar.id = 'demo-banner';
+    bar.innerHTML =
+      '<div class="demo-banner__inner">' +
+      '<span class="demo-banner__text"><strong>Demo</strong> — Not affiliated with ' +
+      'Celebration Homes. Built by Mile Zero Enterprises for evaluation only.</span>' +
+      '<button class="demo-banner__close" type="button" aria-label="Dismiss notice">&times;</button>' +
+      '</div>';
+    document.body.appendChild(bar);
+
+    // Measure the real height (it may wrap on small screens) and reserve exactly
+    // that much space at the top of the page so nothing hides behind the banner.
+    function syncHeight() {
+      var h = bar.offsetHeight || 40;
+      document.documentElement.style.setProperty('--demo-banner-h', h + 'px');
+    }
+    syncHeight();
+    window.addEventListener('resize', syncHeight);
+
+    bar.querySelector('.demo-banner__close').addEventListener('click', function () {
+      bar.remove();
+      document.documentElement.style.setProperty('--demo-banner-h', '0px');
+    });
+  }
+  document.addEventListener('DOMContentLoaded', injectDemoBanner);
+
   // expose
   window.Celebration = {
     initScriptedPage: initScriptedPage,

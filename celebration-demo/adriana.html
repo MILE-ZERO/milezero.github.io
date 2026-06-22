@@ -2,9 +2,14 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
+  <!-- Keep this private demo out of search engines (it mimics a real builder's site). -->
+  <meta name="robots" content="noindex, nofollow, noarchive" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Adriana - Celebration Homes</title>
   <meta name="description" content="The Adriana floorplan in the Ashlyn community by Celebration Homes — 3,249 sq ft, 4-5 bedrooms, built to order." />
+  <!-- Access gate: must load first (blocking, no defer) so the page is locked before it renders. -->
+  <link rel="stylesheet" href="assets/demo-gate.css" />
+  <script src="assets/demo-gate.js"></script>
   <link rel="stylesheet" href="assets/fonts.css" />
   <link rel="stylesheet" href="assets/brand-tokens.css" />
   <link rel="stylesheet" href="assets/site.css" />
