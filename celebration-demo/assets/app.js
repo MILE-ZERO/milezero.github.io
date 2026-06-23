@@ -176,7 +176,7 @@
       var turns = sc.turns || [];
       var step = 0;
 
-      ui.addBot(opts.greeting || "Hi! I'm the Celebration Homes advisor — here any time, even after hours. What brings you in today?", { noHistory: true });
+      ui.addBot(opts.greeting || "Hi! I'm the Celebration Homes advisor. What brings you in today?", { noHistory: true });
 
       function refreshSuggestion() {
         ui.clearSuggestions();
@@ -294,8 +294,8 @@
       if (getStage() !== 'listing') {
         ui.addBot(
           (hadHistory
-            ? "Here's the Adriana floorplan — ask me anything about the layouts, options, or timeline and I'll answer right now."
-            : "Welcome to the Adriana floorplan. Ask me anything about the layouts, options, or build timeline and I'll answer right now."),
+            ? "Here's the Adriana floorplan — ask me anything about the layouts, options, or timeline."
+            : "Welcome to the Adriana floorplan. Ask me anything about the layouts, options, or build timeline."),
           { noHistory: true }
         );
         setStage('listing');
