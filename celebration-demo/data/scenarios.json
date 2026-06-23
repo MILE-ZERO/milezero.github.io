@@ -18,7 +18,7 @@
         },
         {
           "suggested_user": "Yes, show me the Adriana.",
-          "assistant": "Great — taking you to the Adriana floorplan now. You can browse the elevations and floor plans and ask me about layouts, options, and timelines right there, any time of night.",
+          "assistant": "Great — taking you to the Adriana floorplan now. You can browse the elevations and floor plans and ask me about layouts, options, and timelines right there.",
           "ui": { "navigate_to": "adriana.html", "cta_label": "View the Adriana →" }
         }
       ]
