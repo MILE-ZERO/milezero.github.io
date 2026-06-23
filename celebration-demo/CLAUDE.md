@@ -20,6 +20,15 @@ A **two-page**, Celebration-Homes-branded AI home-buying assistant demo. Used to
 - Keep a visible "Demo by Mile Zero Enterprises" footer. This is a proposal, not a live spoof of Celebration's real site.
 - Lead-capture is a **no-op** for the demo. Do not collect or store real PII.
 - **The Adriana is a built-to-order floorplan — never label it a "quick move-in."**
+- **Don't break the gallery's image paths.** Every asset path in `data/adriana.json` (`gallery[].src`,
+  `elevations[].image`, `pdf_url`) must point to a file that actually exists, vendored under
+  `assets/img/adriana/` — the real files are `plan-1.jpg`…`plan-7.jpg` and `adriana-floorplan.pdf`. Paths are
+  **relative to the page (`celebration-demo/`), not to the `data/` folder**, so they start with
+  `assets/img/adriana/…`. Do **not** invent new folders/filenames (e.g. `gallery/adriana-1.jpg`) or repoint
+  these without vendoring the matching files first. Gallery entries may be a bare string **or**
+  `{ "src": "...", "caption": "..." }`; if you change that shape, update `initGallery` in
+  `assets/page-adriana.js` to match. After any edit to these paths, **load `adriana.html` and confirm the
+  gallery image and Download-PDF link actually resolve (HTTP 200, image renders) before committing.**
 
 ## Current state & decisions (this build)
 - **Homepage mirrors the real celebrationhomes.com homepage** (kitchen hero, the live site's intro copy
