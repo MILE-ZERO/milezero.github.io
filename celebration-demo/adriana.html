@@ -123,7 +123,9 @@
     window.CELEBRATION_CONFIG = {
       USE_MOCK: false,
       WEBHOOK_URL: 'https://milezeroenterprises.app.n8n.cloud/webhook/celebration-demo',
-      LIVE_TIMEOUT_MS: 9000
+      // Allow time for the n8n Anthropic node to retry transient 529 "Overloaded"
+      // errors (maxTries 3, ~2s backoff) before the client aborts to the fallback.
+      LIVE_TIMEOUT_MS: 20000
     };
   </script>
   <script src="assets/app.js"></script>
