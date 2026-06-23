@@ -1,0 +1,69 @@
+{
+  "_comment": "Importable n8n workflow skeleton for the Celebration demo backend. Import via n8n > Workflows > Import from File. Then: (1) open the HTTP Request node and attach an Anthropic Header Auth credential instead of the placeholder key, (2) set Allowed Origins on the Webhook node to your GitHub Pages origin, (3) Activate. Node param names can vary slightly by n8n version — if a field doesn't match, see 07-n8n-build-guide.md for the manual setup.",
+  "name": "Celebration Homes Demo - AI Assistant",
+  "nodes": [
+    {
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "celebration-demo",
+        "responseMode": "responseNode",
+        "options": {
+          "allowedOrigins": "https://YOURUSERNAME.github.io"
+        }
+      },
+      "id": "webhook-node",
+      "name": "Webhook",
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2,
+      "position": [240, 300],
+      "webhookId": "celebration-demo"
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://api.anthropic.com/v1/messages",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            { "name": "x-api-key", "value": "REPLACE_WITH_CREDENTIAL_OR_KEY" },
+            { "name": "anthropic-version", "value": "2023-06-01" },
+            { "name": "content-type", "value": "application/json" }
+          ]
+        },
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={{ JSON.stringify({\n  model: 'claude-sonnet-4-6',\n  max_tokens: 400,\n  system: 'You are the Celebration Homes virtual home advisor for the Adriana floorplan in the Ashlyn community. Be warm, concise (2-4 sentences), and ground answers in the Adriana options data provided. For exact prices or contract terms, give a ballpark if known then offer to connect a Celebration agent. Do not invent options or prices.\\n\\nADRIANA_DATA:\\n' + ($json.body.adriana_data ? JSON.stringify($json.body.adriana_data) : 'See server-side data file.'),\n  messages: $json.body.messages\n}) }}",
+        "options": {}
+      },
+      "id": "anthropic-node",
+      "name": "Anthropic - Claude",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [560, 300]
+    },
+    {
+      "parameters": {
+        "respondWith": "json",
+        "responseBody": "={{ { \"reply\": $json.content[0].text } }}",
+        "options": {
+          "responseHeaders": {
+            "entries": [
+              { "name": "Access-Control-Allow-Origin", "value": "https://YOURUSERNAME.github.io" }
+            ]
+          }
+        }
+      },
+      "id": "respond-node",
+      "name": "Respond to Webhook",
+      "type": "n8n-nodes-base.respondToWebhook",
+      "typeVersion": 1.1,
+      "position": [880, 300]
+    }
+  ],
+  "connections": {
+    "Webhook": { "main": [[{ "node": "Anthropic - Claude", "type": "main", "index": 0 }]] },
+    "Anthropic - Claude": { "main": [[{ "node": "Respond to Webhook", "type": "main", "index": 0 }]] }
+  },
+  "settings": {},
+  "active": false
+}

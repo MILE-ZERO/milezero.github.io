@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 308 78" role="img" aria-label="Celebration Homes — More Space. More Style.">
+  <!-- Typographic stand-in for the Celebration Homes wordmark (rights-safe approximation
+       in brand red #d0252e, matching the real logo's CELEBRATION / HOMES / tagline lockup). -->
+  <g fill="#d0252e">
+    <path d="M30 8 L52 26 L48 26 L48 44 L12 44 L12 26 L8 26 Z" fill="#d0252e"/>
+    <rect x="26" y="30" width="8" height="14" fill="#ffffff"/>
+  </g>
+  <text x="64" y="30" font-family="'Zalando Sans','Poppins',sans-serif" font-size="26" font-weight="900" fill="#d0252e" letter-spacing="0.5">CELEBRATION</text>
+  <text x="65" y="48" font-family="'Montserrat',sans-serif" font-size="13" font-weight="600" fill="#d0252e" letter-spacing="8.5">HOMES</text>
+  <text x="66" y="66" font-family="'Poppins',sans-serif" font-style="italic" font-size="12" font-weight="500" fill="#ffffff">More Space. More Style.</text>
+</svg>

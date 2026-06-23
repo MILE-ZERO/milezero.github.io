@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <!-- Keep this private demo out of search engines (it mimics a real builder's site). -->
+  <meta name="robots" content="noindex, nofollow, noarchive" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Adriana - Celebration Homes</title>
+  <meta name="description" content="The Adriana floorplan in the Ashlyn community by Celebration Homes — 3,249 sq ft, 4-5 bedrooms, built to order." />
+  <!-- Access gate: must load first (blocking, no defer) so the page is locked before it renders. -->
+  <link rel="stylesheet" href="assets/demo-gate.css" />
+  <script src="assets/demo-gate.js"></script>
+  <link rel="stylesheet" href="assets/fonts.css" />
+  <link rel="stylesheet" href="assets/brand-tokens.css" />
+  <link rel="stylesheet" href="assets/site.css" />
+</head>
+<body class="plan">
+
+  <!-- Header (same nav as the homepage, over the plan banner) -->
+  <header class="cel-header cel-header--solid">
+    <div class="cel-header__inner">
+      <a class="cel-logo" href="index.html"><img src="assets/logo.svg" alt="Celebration Homes — More Space. More Style." /></a>
+      <button class="cel-burger" id="navBurger" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
+      <nav class="cel-nav" id="celNav">
+        <a href="#">Models</a>
+        <a href="#">Communities <i>&#9662;</i></a>
+        <a href="#">Quick Move-In Homes <i>&#9662;</i></a>
+        <a href="#">Virtual Tours <i>&#9662;</i></a>
+        <a href="#">About <i>&#9662;</i></a>
+        <a href="#">Warranty <i>&#9662;</i></a>
+        <a href="#">Financing</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Plan title banner (blueprint backdrop, like the real page) -->
+  <section class="plan-banner">
+    <div class="wrap">
+      <p class="plan-crumb"><a href="index.html">Communities</a> &nbsp;›&nbsp; <a href="index.html">Ashlyn</a></p>
+      <h1>Adriana Floorplan</h1>
+    </div>
+    <div class="cel-hero__badge plan-badge" aria-hidden="true">
+      <span class="b-num">25</span><span class="b-yrs">YEARS</span><span class="b-cel">CELEBRATING</span>
+    </div>
+  </section>
+
+  <!-- Main: gallery + specs (left), sales manager (right) -->
+  <section class="plan-main">
+    <div class="wrap plan-grid">
+      <div class="plan-left">
+        <div class="plan-gallery" data-gallery>
+          <button class="plan-gallery__arrow left" data-gallery-prev aria-label="Previous">&#8249;</button>
+          <img class="plan-gallery__img" data-gallery-img src="assets/img/adriana/plan-1.jpg" alt="Adriana floorplan" />
+          <button class="plan-gallery__arrow right" data-gallery-next aria-label="Next">&#8250;</button>
+          <div class="plan-gallery__dots" data-gallery-dots></div>
+        </div>
+
+        <table class="plan-specs">
+          <tbody>
+            <tr><th>Area:</th><td data-spec-sqft>3,249 sq. ft.</td></tr>
+            <tr><th>Bedrooms:</th><td data-spec-beds>4-5</td></tr>
+            <tr><th>Bathrooms:</th><td data-spec-baths>3</td></tr>
+            <tr><th>Garage:</th><td data-spec-garage>2-3 Cars</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <aside class="plan-side">
+        <div class="sales-card">
+          <h3 class="sales-card__label">Sales Manager(s)</h3>
+          <p class="sales-card__name" data-sm-name>Greg Welton</p>
+          <p class="sales-card__row">Phone: <a data-sm-phone href="tel:+16154145328">(615) 414-5328</a></p>
+          <p class="sales-card__row">Email: <a data-sm-email href="mailto:Gwelton@celebrationtn.com">Gwelton@celebrationtn.com</a></p>
+          <a class="btn sales-card__btn" data-contact-greg href="mailto:Gwelton@celebrationtn.com?subject=Adriana%20Floorplan%20Inquiry">Contact <span aria-hidden="true">✉</span></a>
+          <a class="btn sales-card__btn" href="mailto:Gwelton@celebrationtn.com?subject=Adriana%20Visit%2FTour%20Request">Request Visit/Tour <span aria-hidden="true">📅</span></a>
+          <a class="btn sales-card__btn" href="index.html">← Back to Community</a>
+          <a class="btn sales-card__btn" data-pdf href="#">Download PDF Floorplan</a>
+        </div>
+      </aside>
+    </div>
+  </section>
+
+  <!-- Red CTA band -->
+  <section class="next-step">
+    <div class="wrap">
+      <h2>Ready to take the next step?</h2>
+      <a class="btn btn--inverse" href="mailto:Gwelton@celebrationtn.com?subject=Adriana%20Floorplan%20Inquiry">Contact Us Now <span aria-hidden="true">✉</span></a>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <span class="demo-badge">Demo by Mile Zero Enterprises</span>
+      <p>This is a concept demo for Celebration Homes — not the live celebrationhomes.com site. Floorplan specs are from the public Adriana page; lead capture is disabled and no information is stored.</p>
+    </div>
+  </footer>
+
+  <!-- Floating AI advisor chat (lower-left bubble) — continues the homepage session -->
+  <div class="chat-fab" id="chatFab">
+    <div class="chat-fab__window" id="chatWindow" hidden>
+      <div class="chat-panel" data-chat>
+        <div class="chat-head">
+          <span class="dot"></span>
+          <span class="title">Celebration Home Advisor</span>
+          <button class="chat-close" id="chatClose" aria-label="Minimize chat">&times;</button>
+        </div>
+        <div class="chat-log" data-chat-log></div>
+        <form class="chat-form" data-chat-form>
+          <input type="text" data-chat-input placeholder="Ask about the Adriana…" autocomplete="off" />
+          <button class="btn" type="submit">Send</button>
+        </form>
+      </div>
+    </div>
+    <button class="chat-fab__btn" id="chatFabBtn" aria-label="Chat with the Celebration advisor" aria-expanded="false">
+      <svg class="ic-chat" viewBox="0 0 24 24" width="26" height="26" fill="#fff" aria-hidden="true"><path d="M4 4h16a2 2 0 012 2v10a2 2 0 01-2 2H9l-5 4V6a2 2 0 012-2z"/></svg>
+      <svg class="ic-close" viewBox="0 0 24 24" width="24" height="24" fill="#fff" aria-hidden="true"><path d="M18.3 5.7L12 12l6.3 6.3-1.4 1.4L10.6 13.4 4.3 19.7 2.9 18.3 9.2 12 2.9 5.7 4.3 4.3l6.3 6.3 6.3-6.3z"/></svg>
+    </button>
+  </div>
+
+  <script>
+    // ---- Page 2 config (must be set BEFORE app.js loads) ----
+    // Track 2 output: paste the n8n production webhook URL and flip USE_MOCK to false.
+    window.CELEBRATION_CONFIG = {
+      USE_MOCK: false,
+      WEBHOOK_URL: 'https://milezeroenterprises.app.n8n.cloud/webhook/celebration-demo',
+      LIVE_TIMEOUT_MS: 9000
+    };
+  </script>
+  <script src="assets/app.js"></script>
+  <script src="assets/page-adriana.js"></script>
+</body>
+</html>

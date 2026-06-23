@@ -1,0 +1,47 @@
+{
+  "_comment": "Scripted demo rails for a TWO-PAGE demo. Scenario A plays in the homepage chat bubble and ends with a CTA that navigates to adriana.html. Scenario B continues in the SAME chat bubble on adriana.html as LIVE Claude calls (with scripted fallback). Naming: Ashlyn = community, Adriana = the to-be-built floorplan. The buyer is relocating and willing to wait 6-12 months for a built-to-order home. Edit copy freely before demo day.",
+  "scenarios": [
+    {
+      "id": "general_to_listing",
+      "page": "index.html",
+      "title": "Scenario A — Relocating buyer on the homepage, guided to the Adriana",
+      "default_mode": "scripted",
+      "intro_note": "A relocating buyer with a flexible 6-12 month timeline gets answered and routed to the Adriana floorplan — the lead the old chatbot would have parked behind an email form.",
+      "turns": [
+        {
+          "suggested_user": "Hi, we're relocating to the Nashville area and just starting to look. Where do you build?",
+          "assistant": "Welcome! Celebration Homes builds across Middle Tennessee — Nashville, Franklin, Murfreesboro, Nolensville and more, all with our 'More Space and More Style' approach. To point you to the right fit: what's your timeline, and roughly how many bedrooms are you after?"
+        },
+        {
+          "suggested_user": "We're not in a rush — sometime in the next 6 to 12 months. We'd want 4 bedrooms, budget around the mid 700s.",
+          "assistant": "Perfect — since you've got some runway, a built-to-order home is a great fit, and you'd have time to personalize it. Our Adriana floorplan in the Ashlyn community is a 4-to-5 bedroom plan right in your range. Want me to pull up the Adriana so you can see the plans and what's customizable?"
+        },
+        {
+          "suggested_user": "Yes, show me the Adriana.",
+          "assistant": "Great — taking you to the Adriana floorplan now. You can browse the elevations and floor plans and ask me about layouts, options, and timelines right there, any time of night.",
+          "ui": { "navigate_to": "adriana.html", "cta_label": "View the Adriana →" }
+        }
+      ]
+    },
+    {
+      "id": "listing_qa",
+      "page": "adriana.html",
+      "title": "Scenario B — Live questions about the Adriana floorplan (Claude)",
+      "default_mode": "live",
+      "intro_note": "On the Adriana page the same chat continues. Answers are generated live by Claude, grounded on Adriana floorplan data — including an unscripted follow-up — then a clean handoff to Greg for pricing/contract specifics.",
+      "context_listing": "adriana",
+      "seed_suggestions": [
+        "Can I add a bonus room over the garage on the Adriana?",
+        "How many bedrooms can the Adriana be configured for?",
+        "What flooring and finish upgrades are available?",
+        "If we start now, what's the timeline to move in?"
+      ],
+      "scripted_fallback": {
+        "Can I add a bonus room over the garage on the Adriana?": "Yes — on the Adriana the bonus room over the garage is an available structural option, adding roughly 300-350 sq ft of finished space. Since the price depends on your selections, I'll have Greg confirm the exact figure for your build. Want me to connect you?",
+        "How many bedrooms can the Adriana be configured for?": "The Adriana is a 4-bedroom plan that can be configured up to 5 bedrooms, with a flexible downstairs room and an optional bonus over the garage. Greg can walk you through the layouts — want me to set that up?",
+        "If we start now, what's the timeline to move in?": "The Adriana is built to order, so most homes take about 6-12 months from contract to move-in, depending on your selections and homesite. Greg can map out a timeline for your situation — want me to connect you?"
+      },
+      "handoff_line": "That's a contract-specific detail, so I'll have Greg confirm it directly — want me to connect you?"
+    }
+  ]
+}
