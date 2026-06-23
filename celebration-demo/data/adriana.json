@@ -10,6 +10,12 @@
   "pricing_policy": {
     "publish_prices": false,
     "rule": "Do NOT quote prices, price ranges, or option costs. Celebration Homes does not publish pricing; all pricing is handled one-on-one by a sales agent. If the buyer asks what something costs, acknowledge the question warmly, describe the feature, and route them to Greg Welton for current pricing and incentives.",
+    "internal_price_assumption": {
+      "_note": "INTERNAL planning assumption for this demo only — the advisor must NOT quote these figures to buyers. They exist to keep the demo grounded (e.g. so a buyer's stated budget reads as realistic). Pricing is still not published; always defer exact pricing, incentives, and option costs to Greg per the rule above.",
+      "ashlyn_starting_price": "$700,000s",
+      "adriana_estimated_range": "mid $700,000s",
+      "currency": "USD"
+    },
     "deferral_contact": "Greg Welton, Sales Manager, (615) 414-5328, Gwelton@celebrationtn.com"
   },
   "community": {

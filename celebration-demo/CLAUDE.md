@@ -46,6 +46,12 @@ A **two-page**, Celebration-Homes-branded AI home-buying assistant demo. Used to
 - **Scenario A buyer** is relocating with a flexible **6–12 month** timeline (a built-to-order fit), not a
   rush buyer. **Scenario B** answers floorplan/options/**build-timeline** questions and hands off to **Greg**
   for pricing/contract specifics.
+- **Pricing stays deferred to Greg — with one internal assumption.** Ashlyn homes start in the **$700,000s**
+  and the Adriana is assumed to be in the **mid-$700,000s**. This lives only as an internal grounding
+  assumption (`pricing_policy.internal_price_assumption` in `data/adriana.json`) and sets the homepage buyer's
+  stated budget ("mid 700s"). It is **not** a published price: `publish_prices` stays `false`, the advisor never
+  quotes a price/range/option cost, and all cost questions still route to Greg. Don't surface these figures in
+  the UI or have the advisor speak them.
 - **Self-contained / zero external calls:** fonts (`assets/fonts/`) and the homepage hero are vendored locally;
   the Adriana gallery uses Celebration's own brochure images, vendored to `assets/img/adriana/`. The only
   network call the demo makes is the live Scenario B chat → n8n.
