@@ -41,9 +41,14 @@
     if (!img) return;
     var i = 0;
 
+    // gallery entries may be plain strings or { src, caption } objects
+    function srcOf(item) { return typeof item === 'string' ? item : (item && item.src) || ''; }
+    function captionOf(item) { return (item && typeof item === 'object' && item.caption) || ''; }
+
     function render() {
-      img.src = images[i];
-      img.alt = 'Adriana floorplan — page ' + (i + 1) + ' of ' + images.length;
+      var item = images[i];
+      img.src = srcOf(item);
+      img.alt = captionOf(item) || ('Adriana floorplan — page ' + (i + 1) + ' of ' + images.length);
       if (dots) {
         [].forEach.call(dots.children, function (d, idx) { d.className = 'dot' + (idx === i ? ' active' : ''); });
       }

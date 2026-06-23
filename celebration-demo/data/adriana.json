@@ -15,9 +15,38 @@
   "community": {
     "name": "Ashlyn",
     "builder": "Celebration Homes",
-    "area": "Middle Tennessee (Nashville metro)",
+    "area": "Fairview, Williamson County, Middle Tennessee (Nashville metro)",
     "url": "https://celebrationhomes.com/communities/ashlyn",
     "tagline": "More Space and More Style",
+    "lifestyle_summary": "Ashlyn is set in Fairview in Williamson County, giving buyers a quieter, more spacious setting with quick access to lakes, parks, and recreation, plus an easy drive to Franklin shopping and dining. It pairs small-town surroundings with the highly regarded Williamson County school district.",
+    "amenities_and_nearby": {
+      "_note": "Points of interest near the Ashlyn community. Use these to help buyers picture the lifestyle and location. Do not state exact distances or drive times unless asked to confirm with an agent.",
+      "lakes_and_outdoors": [
+        { "name": "Lake Anna", "type": "Lake / outdoor recreation" },
+        { "name": "Lake Byrd", "type": "Lake / outdoor recreation" },
+        { "name": "Hidden Lake", "type": "Lake / outdoor recreation" },
+        { "name": "Lake Van", "type": "Lake / outdoor recreation" },
+        { "name": "Bowie Nature Park", "type": "Nature park", "notes": "Large Fairview nature park with trails, lakes, and outdoor programs" }
+      ],
+      "recreation_and_community": [
+        { "name": "Williamson County Recreation Center", "type": "Recreation center / fitness" },
+        { "name": "Public Library", "type": "Library" }
+      ],
+      "shopping_and_dining": [
+        { "name": "Shopping Centers", "type": "Shopping", "notes": "Everyday retail and grocery options in the area" },
+        { "name": "Cool Springs Galleria", "type": "Regional shopping mall", "notes": "Major mall in Franklin/Cool Springs with national retailers and dining" },
+        { "name": "Downtown Franklin", "type": "Historic downtown", "notes": "Historic Main Street with boutiques, restaurants, and events" }
+      ]
+    },
+    "schools": {
+      "_note": "Ashlyn is served by the Williamson County school district. Share these schools when buyers ask about education; for current attendance-zone confirmation, enrollment, and ratings, route the buyer to Greg or the district.",
+      "district": "Williamson County Schools",
+      "assigned": [
+        { "name": "Fairview Elementary School", "level": "Elementary", "district": "Williamson County Schools" },
+        { "name": "Fairview Middle School", "level": "Middle", "district": "Williamson County Schools" },
+        { "name": "Fairview High School", "level": "High", "district": "Williamson County Schools" }
+      ]
+    },
     "sales_manager": {
       "name": "Greg Welton",
       "title": "Sales Manager",
@@ -106,13 +135,13 @@
     ]
   },
   "gallery": [
-    "assets/img/adriana/plan-1.jpg",
-    "assets/img/adriana/plan-2.jpg",
-    "assets/img/adriana/plan-3.jpg",
-    "assets/img/adriana/plan-4.jpg",
-    "assets/img/adriana/plan-5.jpg",
-    "assets/img/adriana/plan-6.jpg",
-    "assets/img/adriana/plan-7.jpg"
+    { "src": "assets/img/adriana/plan-1.jpg", "caption": "Elevation A (shown with optional gooseneck fixture)" },
+    { "src": "assets/img/adriana/plan-2.jpg", "caption": "Elevation B (shown with optional gooseneck fixture)" },
+    { "src": "assets/img/adriana/plan-3.jpg", "caption": "Elevation C" },
+    { "src": "assets/img/adriana/plan-4.jpg", "caption": "Elevation D" },
+    { "src": "assets/img/adriana/plan-5.jpg", "caption": "Main level floor plan - 2,128 sq.ft." },
+    { "src": "assets/img/adriana/plan-6.jpg", "caption": "Upper level floor plan - 1,121 sq.ft." },
+    { "src": "assets/img/adriana/plan-7.jpg", "caption": "Floor plan options" }
   ],
   "pdf_url": "assets/img/adriana/adriana-floorplan.pdf"
 }
